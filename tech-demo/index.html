@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Stealing Ur Feelings Tech Demo</title>
+	
+	<link rel="preload" href="media\07042018.mp4" as="video">
+	<link rel="preload" href="media\spyHat.png" as="image">
+	<link rel="preload" href="media\spyGlasses.png" as="image">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<script src="js/clmtrackr.min.js"></script>
+	<script src="js/emotion_classifier.js"></script>
+	<script src="js/emotionmodel.js"></script>
+	<script src="js/stealing-ur-feelings.js"></script>
+</head>
+
+<body>
+	<img id="spy-hat" class="ar-prop" src="media\spyHat.png">
+	<img id="spy-glasses" class="ar-prop" src="media\spyGlasses.png">
+
+	<video id="movie" src="media\07042018.mp4" preload="auto"></video>
+
+	<video id="webcam-video" preload="auto" loop playsinline autoplay></video>
+
+	<div id="loading-plate">
+		<img id="play-button" src="media\play.svg">
+	</div>
+
+	<div id="movie-canvas-container">
+		<canvas id="movie-canvas"></canvas>
+	</div>
+
+	<div id="master-container">
+		<canvas id="ar-canvas"></canvas>
+
+		<div id="film">
+
+		</div>
+
+		<div id="wireframe">
+
+		</div>
+	</div>	
+
+	<div id="overlay-container">
+		<canvas id="ar-overlay"></canvas>
+
+		<div class="spacer"></div>
+
+		<canvas id="wireframe-overlay"></canvas>
+	</div>
+</body>
+
+</html>

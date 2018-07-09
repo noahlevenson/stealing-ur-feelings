@@ -1,0 +1,146 @@
+body, html {
+	height: 100%;
+	background-color: #000000;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.ar-prop {
+	display: none;
+}
+
+#loading-plate {
+	background-color: #333333;
+	width: 960px;
+	height: 540px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    font-size: 60px;
+}
+
+#play-button {
+	visibility: hidden;
+	cursor: pointer;
+}
+
+#movie {
+	width: 964px;
+	height: 540px;
+	display: none;
+	/*border-width: 10px;
+    border-color: #FFFFFF;
+    border-style: solid;*/
+}
+
+/* This wraps the movie canvas so we can hide the framecodes */
+#movie-canvas-container {
+	position: absolute;
+	width: 960px;
+	height: 540px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	z-index: 100;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+#movie-canvas {
+	position: relative;
+    left: -2px;
+	width: 964px;
+	height: 540px;
+	pointer-events: none;
+}
+
+#webcam-video {
+	display: none;
+}
+
+#master-container {
+	position: absolute;
+	width: 960px;
+	height: 540px;
+	/*border-width: 10px;
+    border-color: #FFFFFF;
+    border-style: solid;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#ar-canvas {
+	width: 33.333333333333%;
+	height: 100%;
+	/*border-width: 10px;
+    border-color: #FFFFFF;
+    border-style: solid;*/
+}
+
+#film {
+	position: relative;
+	width: 33.333333333333%;
+	height: 100%;
+	/*border-width: 10px;
+    border-color: #FFFFFF;
+    border-style: solid;*/
+}
+
+#wireframe {
+	position: relative;
+	width: 33.333333333333%;
+	height: 100%;
+	background-color: #333333;
+	/*border-width: 10px;
+    border-color: #FFFFFF;
+    border-style: solid;*/
+}
+
+#overlay-container {
+	position: absolute;
+	width: 960px;
+	height: 540px;
+	/*border-width: 10px;
+    border-color: #FFFFFF;
+    border-style: solid;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#ar-overlay {
+	width: 33%;
+	height: 100%;
+	/*border-width: 10px;
+	border-color: #FFFFFF;
+	border-style: solid;*/
+}
+
+#wireframe-overlay {
+	width: 33%;
+	height: 100%;
+	/*border-width: 10px;
+    border-color: #FFFFFF;*/
+}
+
+.spacer {
+	width: 33%;
+	height: 100%;
+	/*border-width: 10px;
+    border-color: #FFFFFF;
+    border-style: solid;*/
+}
