@@ -1,4 +1,4 @@
-[tech demo gif goes here]
+![stealing ur feelings](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/tech-demo-07112018.gif)
 
 ### STEALING UR FEELINGS
 
@@ -12,9 +12,9 @@ We're gonna have a slapping soundtrack, too.
 <br/><br/>
 
 #### :eyes: check these out first 
-* [interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/)
+* [interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) (requires a computer with a webcam)
 * wireframe mockups
-* [initial funding concept](https://noahlevenson.github.io/stealing-ur-feelings/media/initial-funding-concept.md)
+* [initial funding concept](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/initial-funding-concept.md)
 * film script (coming soon)
 <br/><br/>
 
@@ -37,7 +37,7 @@ To create our Snapchat-style AR filter and perform emotion recognition in the br
 
 **Frame-accurate video sync**
 
-The web video API has no method to accurately return the current frame position of a video element, which makes it difficult to create synchronized keyframe events. Mathematical solutions exist, but they desynchronize due to floating point rounding errors. Instead, we'll use the optical framecode system developed for our previous interactive film, [Weird Box](https://www.fastcompany.com/40434842/your-instagram-photos-star-in-this-funny-and-creepy-short-film). For this method, we actually embed tiny barcode-like images in our video which contain the binary representation of each frame number.
+The web video API has no method to accurately return the current frame position of a video element, which makes it difficult to create synchronized keyframe events. Mathematical solutions exist, but they desynchronize due to floating point rounding errors. Instead, we'll use the optical framecode system developed for our previous interactive film, *[Weird Box](https://www.fastcompany.com/40434842/your-instagram-photos-star-in-this-funny-and-creepy-short-film)*. For this method, we actually embed tiny barcode-like images in our video which contain the binary representation of each frame number.
 
 
 **Production value**
