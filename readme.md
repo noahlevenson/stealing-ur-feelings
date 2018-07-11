@@ -48,7 +48,7 @@ We like shooting CinemaDNG Raw with [Blackmagic](https://www.blackmagicdesign.co
 #### :pencil: todo
 ~~submit initial funding concept~~ 
 
-create wireframe mockups
+~~create wireframe mockups~~
 
 ~~make a tech demo~~
 
