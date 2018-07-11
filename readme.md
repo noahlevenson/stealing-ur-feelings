@@ -13,7 +13,7 @@ We're gonna have a slapping soundtrack, too.
 
 #### :eyes: check these out first 
 * [interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) (requires a computer with a webcam)
-* wireframe mockups
+* [wireframe mockups](https://noahlevenson.github.io/stealing-ur-feelings/media/wireframes_07112018.pdf)
 * [initial funding concept](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/initial-funding-concept.md)
 * film script (coming soon)
 <br/><br/>
