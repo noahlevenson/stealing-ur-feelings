@@ -12,7 +12,7 @@ We're gonna have a slapping soundtrack, too.
 <br/><br/>
 
 #### :eyes: check these out first 
-* [interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) (requires a computer with a webcam)
+* [interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) (requires a computer with a webcam) :arrow_left: :arrow_left: :arrow_left:
 * [wireframe mockups](https://noahlevenson.github.io/stealing-ur-feelings/media/wireframes_07112018.pdf)
 * [initial funding concept](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/initial-funding-concept.md)
 * film script (coming soon)
@@ -52,7 +52,7 @@ We like shooting CinemaDNG Raw with [Blackmagic](https://www.blackmagicdesign.co
 
 ~~make a tech demo~~
 
-submit full grant application
+~~submit full grant application~~
 
 write/finalize film script
 
