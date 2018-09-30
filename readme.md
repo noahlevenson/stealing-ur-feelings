@@ -19,6 +19,8 @@ We're gonna have a slapping soundtrack, too.
 <br/><br/>
 
 #### :zap: changelog
+**07/12/2018** Submitted full application to Mozilla
+
 **07/08/2018** The interactive tech demo is live!
 
 **07/06/2018** Registered domain name: *stealingurfeelin.gs*
@@ -70,7 +72,7 @@ frontend development
 
 produce AR filter gfx assets
 
-user testing, feedback + revisions
+user testing, feedback + iteration
 
 produce final film titles + gfx assets
 
@@ -80,4 +82,7 @@ film final color grade
 
 film final conform
 
-user acceptance testing 
+user acceptance testing
+
+release strategy/marketing/festival + awards submissions
+ 
