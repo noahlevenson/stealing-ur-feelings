@@ -51,6 +51,14 @@ The web video API has no method to accurately return the current frame position 
 We like shooting CinemaDNG Raw with [Blackmagic](https://www.blackmagicdesign.com/) cameras and vintage Nikon lenses. We record our location audio with the industry standard [Sennheiser MKH-416](https://www.bhphotovideo.com/c/product/79502-REG/Sennheiser_MKH416_P48U3_MKH_416_Short_Shotgun.html).
 <br/><br/>
 
+#### :construction: engineering hit list
+reduce framecode bit depth to 16 bits
+make framecode system use typedarrays instead of hacky integer bit parsing
+try functional keyframe events system
+make everything go full screen and responsive
+mobile benchmarking and optimization
+<br/><br/>
+
 #### :pencil: todo
 ~~submit initial funding concept~~ 
 
