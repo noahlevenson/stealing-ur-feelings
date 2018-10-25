@@ -53,9 +53,13 @@ We like shooting CinemaDNG Raw with [Blackmagic](https://www.blackmagicdesign.co
 
 #### :construction: engineering hit list
 reduce framecode bit depth to 16 bits
+
 make framecode system use typedarrays instead of hacky integer bit parsing
+
 try functional keyframe events system
+
 make everything go full screen and responsive
+
 mobile benchmarking and optimization
 <br/><br/>
 
