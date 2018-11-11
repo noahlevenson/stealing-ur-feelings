@@ -246,27 +246,28 @@ window.onload = () => {
 	// 
 }	
 
-// TODO: Let's update this to use typedarrays and bit manipulation for performance
 function getOpticalFrame(canvasContext) {
-	// Read the pixels off the canvas and store them in an imgdata object
-	const barcode = canvasContext.getImageData(1, 1, 2, 16);
+	// Read the framecode pixels off the canvas and store them in an imgdata object
+	const framecode = canvasContext.getImageData(1, 1, 2, 16);
 	
-	// Grab a reference to the underlying imgdata array - may improve performance
-	const id = barcode.data;
+	// Grab a reference to the underlying imgdata typedarray - may improve performance
+	const id = framecode.data;
 
-	// Transform black and white pixels to an array of 0s and 1s
-	const binaryArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-	
-	for (let i = 0, j = 0, len = id.length; i < len; i += 4, j += 1) {
-		const value = (id[i] + id[i + 1] + id[i + 2] + id[i + 3]) / 4;
-		binaryArray[j] = value > 125 ? 1 : 0;
+	// Allocate a buffer of 4 bytes
+	const buffer = new ArrayBuffer(4);
+
+	// Our final decoded frame will simply be an interpretation of the buffer as an unsigned 32-bit integer
+	const frame = new Uint32Array(buffer);
+
+	// Note that framecodes have reversed bit endianness; they're most significant bit first
+	for (let i = 0, bitOffset = 31, len = id.length; i < len; i += 4, bitOffset -= 1) {
+		const v = (id[i] + id[i + 1] + id[i + 2] + id[i + 3]) / 4;
+
+		// If the framecode pixel is white, set the bit at the corresponding bit offset
+		if (v > 125) {
+			frame[0] |= 1 << bitOffset;
+		}
 	}
-		
-	// Convert a 32-bit binary to a decimal
-	let frame = 0;
-	for (let i = 0, mask = 2147483648; mask > 0; mask >>>= 1, i += 1) {
-		frame += binaryArray[i] * mask;
-	}
-	
-	return frame;			
+			
+	return frame[0];				
 }
