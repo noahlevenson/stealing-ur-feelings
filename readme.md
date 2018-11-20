@@ -15,7 +15,7 @@ We're gonna have a slapping soundtrack, too.
 * [interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) (requires a computer with a webcam) :arrow_left: :arrow_left: :arrow_left:
 * [wireframe mockups](https://noahlevenson.github.io/stealing-ur-feelings/media/wireframes_07112018.pdf)
 * [initial funding concept](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/initial-funding-concept.md)
-* full application (coming soon)
+* [full application](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/full-application.md)
 * [slides from the 10/24/2018 Pecha Kucha talk at London's Royal Society of Arts](https://docs.google.com/presentation/d/e/2PACX-1vSGp751HRvqRZc-oWQM_JA9mb0IfSe8w2bBLbMmNi3-fb2gRVuUeyUqYsko0Gatd53z2BETPx-63Ybk/pub?start=false&loop=false&delayms=20000)
 * film script (coming soon)
 <br/><br/>
