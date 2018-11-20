@@ -2,7 +2,9 @@
 
 ### STEALING UR FEELINGS
 
-*Stealing Ur Feelings* is a web-based interactive documentary that reveals how Snapchat can use your face to secretly collect data about your emotions. It's being produced with the support of a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation and the Open Society Foundations. 
+*Stealing Ur Feelings* is a web-based interactive documentary that reveals how Snapchat can use your face to secretly collect data about your emotions. 
+
+It's being produced with the support of a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation and the Open Society Foundations. 
 
 Using a combination of filmed content, augmented reality and game mechanics, the film will explore the wild science of machine learning-based facial feature tracking, demystify the algorithms that determine if you're happy or sad, and show you how corporations can correlate your emotions with the content you consume to do some Not Very Nice Things.
 
