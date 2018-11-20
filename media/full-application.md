@@ -75,6 +75,7 @@ This younger audience loves the internet and their mobile apps, but like most pe
 
 <br/><br/>
 **Working Open**
+
 I've created a public GitHub repository which serves as a living open workspace:
 
 https://github.com/noahlevenson/stealing-ur-feelings
