@@ -2,13 +2,13 @@
 
 ### STEALING UR FEELINGS
 
-*Stealing Ur Feelings* is a web-based interactive documentary that reveals how Snapchat can use your face to secretly collect data about your emotions. 
+*Stealing Ur Feelings* is a web-based interactive documentary that reveals how Snapchat can use your face to secretly collect data about your emotions. It's being produced with the support of a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation and the Open Society Foundations. 
 
-Using a combination of filmed content, augmented reality and game mechanics, we'll explore the wild science of machine learning-based facial feature tracking, demystify the algorithms that determine if you're happy or sad, and show you how corporations can correlate your emotions with the content you consume to do some Not Very Nice Things.
+Using a combination of filmed content, augmented reality and game mechanics, the film will explore the wild science of machine learning-based facial feature tracking, demystify the algorithms that determine if you're happy or sad, and show you how corporations can correlate your emotions with the content you consume to do some Not Very Nice Things.
 
 We're gonna have a slapping soundtrack, too.
 
-*Stealing Ur Feelings* began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is a living open workspace.** Check back often for updates!
+*Stealing Ur Feelings* began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
 <br/><br/>
 
 #### :eyes: check these out first 
@@ -103,4 +103,4 @@ film final conform
 user acceptance testing
 
 release strategy/marketing/festival + awards submissions
- 
+
