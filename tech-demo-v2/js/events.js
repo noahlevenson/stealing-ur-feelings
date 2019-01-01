@@ -160,15 +160,17 @@ filmEventList[2401] = new eventStruct(() => {
 
 	userVideoProcessedSprite.visible = true;
 
-	const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
-	userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
-	userVideoProcessedBMD.update();
+	if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
+		const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
+		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+		userVideoProcessedBMD.update();
 
-	userVideoProcessedBMD.processPixelRGB((pixel) => {
-		const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
-		return {r: luma, g: luma, b: luma, a: 255};		
-	}, this);	
-
+		userVideoProcessedBMD.processPixelRGB((pixel) => {
+			const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
+			return {r: luma, g: luma, b: luma, a: 255};		
+		}, this);
+	}
+		
 	const emotions = getEmotions(viewerEmotions);
 });
 
@@ -177,15 +179,17 @@ for (let i = 2402; i < 2520; i += 1) {
 	const e = new eventStruct(() => {
 		userVideoProcessedSprite.visible = true;
 
-		const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
-		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
-		userVideoProcessedBMD.update();
+		if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
+			const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
+			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+			userVideoProcessedBMD.update();
 
-		userVideoProcessedBMD.processPixelRGB((pixel) => {
-			const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
-			return {r: luma, g: luma, b: luma, a: 255};		
-		}, this);	
-
+			userVideoProcessedBMD.processPixelRGB((pixel) => {
+				const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
+				return {r: luma, g: luma, b: luma, a: 255};		
+			}, this);	
+		}
+		
 		const emotions = getEmotions(viewerEmotions);
 	});
 
@@ -198,28 +202,7 @@ filmEventList[2520] = new eventStruct(() => {
 
 	userVideoProcessedSprite.visible = true;
 
-	const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
-	userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
-	userVideoProcessedBMD.update();
-
-	userVideoProcessedBMD.processPixelRGB((pixel) => {
-		const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
-			
-		if (luma < 125) {
-			return {r: 0, g: 0, b: 0, a: 255};
-		} else {
-			return {r: 255, g: 255, b: 255, a: 255};
-		}	
-	}, this);	
-
-	const emotions = getEmotions(viewerEmotions);
-});
-
-// Continue threshold filter
-for (let i = 2521; i < 2634; i += 1) {
-	const e = new eventStruct(() => {
-		userVideoProcessedSprite.visible = true;
-
+	if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
 		const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
 		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
 		userVideoProcessedBMD.update();
@@ -233,7 +216,32 @@ for (let i = 2521; i < 2634; i += 1) {
 				return {r: 255, g: 255, b: 255, a: 255};
 			}	
 		}, this);	
+	}
+	
+	const emotions = getEmotions(viewerEmotions);
+});
 
+// Continue threshold filter
+for (let i = 2521; i < 2634; i += 1) {
+	const e = new eventStruct(() => {
+		userVideoProcessedSprite.visible = true;
+
+		if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
+			const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
+			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+			userVideoProcessedBMD.update();
+
+			userVideoProcessedBMD.processPixelRGB((pixel) => {
+				const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
+					
+				if (luma < 125) {
+					return {r: 0, g: 0, b: 0, a: 255};
+				} else {
+					return {r: 255, g: 255, b: 255, a: 255};
+				}	
+			}, this);	
+		}
+		
 		const emotions = getEmotions(viewerEmotions);
 	});
 
@@ -245,20 +253,22 @@ for (let i = 2634; i < 2693; i += 1) {
 	const e = new eventStruct(() => {
 		userVideoProcessedSprite.visible = true;
 
-		const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
-		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
-		userVideoProcessedBMD.update();
+		if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
+			const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
+			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+			userVideoProcessedBMD.update();
 
-		userVideoProcessedBMD.processPixelRGB((pixel) => {
-			const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
-				
-			if (luma < 125) {
-				return {r: 0, g: 0, b: 0, a: 255};
-			} else {
-				return {r: 255, g: 255, b: 255, a: 255};
-			}	
-		}, this);
-
+			userVideoProcessedBMD.processPixelRGB((pixel) => {
+				const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
+					
+				if (luma < 125) {
+					return {r: 0, g: 0, b: 0, a: 255};
+				} else {
+					return {r: 255, g: 255, b: 255, a: 255};
+				}	
+			}, this);
+		}
+		
 		boundingBox.visible = true;
 		boundingBox.clear();
 		boundingBox.lineStyle(5, 0x80ff00, 1);
@@ -286,20 +296,22 @@ filmEventList[2693] = new eventStruct(() => {
 
 	userVideoProcessedSprite.visible = true;
 
-	const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
-	userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
-	userVideoProcessedBMD.update();
+	if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
+		const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
+		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+		userVideoProcessedBMD.update();
 
-	userVideoProcessedBMD.processPixelRGB((pixel) => {
-		const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
-			
-		if (luma < 125) {
-			return {r: 0, g: 0, b: 0, a: 255};
-		} else {
-			return {r: 255, g: 255, b: 255, a: 255};
-		}	
-	}, this);	
-
+		userVideoProcessedBMD.processPixelRGB((pixel) => {
+			const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
+				
+			if (luma < 125) {
+				return {r: 0, g: 0, b: 0, a: 255};
+			} else {
+				return {r: 255, g: 255, b: 255, a: 255};
+			}	
+		}, this);	
+	}
+	
 	boundingBox.visible = true;
 	boundingBox.clear();
 	boundingBox.lineStyle(5, 0x80ff00, 1);
@@ -317,20 +329,22 @@ for (let i = 2694; i < 2724; i += 1) {
 	const e = new eventStruct(() => {
 		userVideoProcessedSprite.visible = true;
 
-		const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
-		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
-		userVideoProcessedBMD.update();
+		if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
+			const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 1.5;
+			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+			userVideoProcessedBMD.update();
 
-		userVideoProcessedBMD.processPixelRGB((pixel) => {
-			const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
-				
-			if (luma < 125) {
-				return {r: 0, g: 0, b: 0, a: 255};
-			} else {
-				return {r: 255, g: 255, b: 255, a: 255};
-			}	
-		}, this);	
-
+			userVideoProcessedBMD.processPixelRGB((pixel) => {
+				const luma = (pixel.r * 0.2126 + pixel.g * 0.7152 + pixel.b * 0.0722);
+					
+				if (luma < 125) {
+					return {r: 0, g: 0, b: 0, a: 255};
+				} else {
+					return {r: 255, g: 255, b: 255, a: 255};
+				}	
+			}, this);	
+		}
+		
 		boundingBox.visible = true;
 		boundingBox.clear();
 		boundingBox.lineStyle(5, 0x80ff00, 1);

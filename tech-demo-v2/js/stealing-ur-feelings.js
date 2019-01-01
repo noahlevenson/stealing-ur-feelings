@@ -19,12 +19,15 @@ const K_FRAMECODE_BIT_DEPTH = 16;
 // Number of landmarks fitted by our facial pose estimation model
 const K_NUMBER_OF_LANDMARKS = 71;
 
-// Framewise update frequency for (certain) AR props
+// Framewise update frequency for AR props
 const K_AR_FRAME_INTERVAL = 1;
 
 // The factor by which we downres the user video sprite for image processing effects
 // This gives us an important performance boost and also creates desirable pixelation
 const K_VIDEO_PROCESSING_DOWNRES_FACTOR = 4;
+
+// Framewise update frequency for image processing effects
+const K_VIDEO_PROCESSING_FRAME_INTERVAL = 4;
 
 // Points describe paths in our landmarks array to draw corresponding features
 const K_FACE_OUTLINE = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
@@ -120,7 +123,7 @@ const cfg = {
 	multiTexture: false,
 	parent: "the-film",
 	enableDebug: false,
-	renderer: Phaser.AUTO,
+	renderer: Phaser.CANVAS,
 	antialias: true,
 };
 
