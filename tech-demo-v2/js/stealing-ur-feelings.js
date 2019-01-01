@@ -120,7 +120,7 @@ const cfg = {
 	multiTexture: false,
 	parent: "the-film",
 	enableDebug: false,
-	renderer: Phaser.AUTO,
+	renderer: Phaser.CANVAS,
 	antialias: true,
 };
 

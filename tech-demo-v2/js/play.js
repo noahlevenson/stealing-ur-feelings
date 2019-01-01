@@ -97,7 +97,7 @@ function drawEmotionChart(emotionStruct) {
 		angryLabelText.position.y = K_PROJECT_HEIGHT + angryy + 30;
 
 		sadLabelText.position.x = K_PROJECT_WIDTH / 4 + 361.25;
-		sadLabelText.position.y = K_PROJECT_HEIGHT + sady + 20;
+		sadLabelText.position.y = K_PROJECT_HEIGHT + sady + 30;
 
 		surprisedLabelText.position.x = K_PROJECT_WIDTH / 4 + 598.75
 		surprisedLabelText.position.y = K_PROJECT_HEIGHT + surprisedy + 30;
