@@ -40,13 +40,13 @@ for (let i = 1043; i < 1456; i += 1) {
 			if (frame % K_AR_FRAME_INTERVAL === 0) {
 				const s = Math.sqrt(clmParams[0] / 5);
 				
-				thiefMaskSprite.scale.setTo(s, s);
-				thiefMaskSprite.position = {x: landmarks[33][0] + userVideoGroup.position.x, y: landmarks[33][1] + (5 * s) + userVideoGroup.position.y};
+				thiefMaskSprite.scale.setTo(s / 1.5, s / 1.5);
+				thiefMaskSprite.position = {x: landmarks[33][0] + userVideoGroup.position.x, y: landmarks[33][1] + (3 * s) + userVideoGroup.position.y};
 				thiefMaskSprite.rotation = clmParams[1] * 0.8;
 				thiefMaskSprite.visible = true;
 
 				spyHatSprite.scale.setTo(s, s);
-				spyHatSprite.position = {x: landmarks[33][0] + userVideoGroup.position.x, y: landmarks[33][1] - (50 * s) + userVideoGroup.position.y};
+				spyHatSprite.position = {x: landmarks[33][0] + userVideoGroup.position.x, y: landmarks[33][1] - (40 * s) + userVideoGroup.position.y};
 				spyHatSprite.rotation = clmParams[1] * 0.8;
 				spyHatSprite.visible = true;
 			}
