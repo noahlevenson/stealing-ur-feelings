@@ -39,10 +39,13 @@ for (let i = 1043; i < 1456; i += 1) {
 		if (landmarks) {
 			if (frame % K_AR_FRAME_INTERVAL === 0) {
 				const s = Math.sqrt(clmParams[0] / 5);
-				
-				thiefMaskSprite.scale.setTo(s / 1.5, s / 1.5);
-				thiefMaskSprite.position = {x: landmarks[33][0] + userVideoGroup.position.x, y: landmarks[33][1] + (3 * s) + userVideoGroup.position.y};
-				thiefMaskSprite.rotation = clmParams[1] * 0.8;
+
+				const pline = new Phaser.Line(landmarks[27][0] + userVideoGroup.position.x, landmarks[27][1] + userVideoGroup.position.y, landmarks[32][0] + userVideoGroup.position.x, landmarks[32][1] + userVideoGroup.position.y);
+				const pd = pline.length;
+				const maskScale = pd / 280;
+				thiefMaskSprite.scale.setTo(maskScale, maskScale);
+				thiefMaskSprite.position = pline.midPoint();
+				thiefMaskSprite.rotation = pline.angle;
 				thiefMaskSprite.visible = true;
 
 				spyHatSprite.scale.setTo(s, s);
