@@ -48,9 +48,15 @@ for (let i = 1043; i < 1456; i += 1) {
 				thiefMaskSprite.rotation = pline.angle;
 				thiefMaskSprite.visible = true;
 
-				spyHatSprite.scale.setTo(s, s);
-				spyHatSprite.position = {x: landmarks[33][0] + userVideoGroup.position.x, y: landmarks[33][1] - (40 * s) + userVideoGroup.position.y};
-				spyHatSprite.rotation = clmParams[1] * 0.8;
+				const cline = new Phaser.Line(landmarks[0][0] + userVideoGroup.position.x, landmarks[0][1] + userVideoGroup.position.y, landmarks[14][0] + userVideoGroup.position.x, landmarks[14][1] + userVideoGroup.position.y);
+				const cd = cline.length;
+				const hatScale = cd / 360;
+				spyHatSprite.scale.setTo(hatScale, hatScale);
+				const median = cline.midPoint();
+				let perpendicular = new Phaser.Line(median.x, median.y, 0, 0);
+				perpendicular = perpendicular.fromAngle(median.x, median.y, cline.angle - 1.5708, cd * 0.8);
+				spyHatSprite.position = perpendicular.end;
+				spyHatSprite.rotation = cline.angle;
 				spyHatSprite.visible = true;
 			}
 		} else {

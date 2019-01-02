@@ -230,7 +230,7 @@ const playState = {
 		thiefMaskSprite.visible = false;
 
 		spyHatSprite = game.add.sprite(0, 0, "spyHat");
-		spyHatSprite.anchor.setTo(0.5, 1.0);
+		spyHatSprite.anchor.setTo(0.5, 0.5);
 		spyHatSprite.visible = false;
 
 		headPhysicsSprite = game.add.sprite(500, 400, "headPhysicsSprite");
