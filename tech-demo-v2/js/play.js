@@ -279,6 +279,8 @@ const playState = {
 
 			filmVideo.currentTime = 0;
 
+			startTime = game.time.now;
+
 			filmVideo.play();
 
 			activated = true;

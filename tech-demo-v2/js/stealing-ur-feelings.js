@@ -1,5 +1,5 @@
 // Debug mode
-const K_DEBUG = true;
+const K_DEBUG = false;
 const K_DEBUG_SEEK_TIME = 30;
 const K_DEBUG_LOG_ALL_FRAMES = false;
 const K_DEBUG_SHOW_FRAMECODE = false;
@@ -93,6 +93,7 @@ let playButton;
 
 // State
 let activated = false;
+let startTime = 0;
 
 // Instances of viewer emotions
 let viewerEmotions;

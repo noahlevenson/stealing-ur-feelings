@@ -71,8 +71,8 @@ filmEventList[1463] = new eventStruct(() => {
 
 	emojiEmitter.bounce.setTo(0.5, 0.5);
 
-	const xs = Math.cos(1) * 500;
-	const ys = Math.sin(1) * 500;
+	const xs = Math.cos(1) * 700;
+	const ys = Math.sin(1) * 700;
 	
 	emojiEmitter.setXSpeed(xs, xs * 4);
 	emojiEmitter.setYSpeed(ys, ys * 4);
@@ -379,7 +379,8 @@ filmEventList[2860] = new eventStruct(() => {
 for (let i = 2861; i < 3167; i += 1) {
 	const e = new eventStruct(() => {
 		const pct = (viewerEmotions.avg("happy") * 100).toFixed(0);
-		angerText.text = "You've been an average of " + pct + "% happy for the last " + userVideo.currentTime.toFixed(2) + " seconds.";
+		const elapsed = ((game.time.now - startTime) / 1000).toFixed(2);
+		angerText.text = "You've been an average of " + pct + "% happy for the last " + elapsed + " seconds.";
 	});
 
 	filmEventList[i] = e;
