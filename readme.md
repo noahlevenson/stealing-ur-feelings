@@ -8,7 +8,7 @@ And it's aimed at the front of your head.
 
 *Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps are using facial emotion recognition technology to profit from your grief, promote inequality, and endanger American democracy.
 
-It's supported by a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation and the Open Society Foundations. 
+It's supported by a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
 
 The project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
 <br/><br/>
@@ -28,7 +28,7 @@ Now, for the first time ever, go inside the apps we show our faces to every day 
 
 Using a combination of AR, filmed content, and interactive game mechanics, we'll reveal the science of machine learning-based facial feature tracking, demystify the algorithms that determine if you're happy or sad, and reveal the tech bros' plans to get filthy rich -- and rig the game against you -- by correlating your emotions with your geographic location.
 
-Along the way, we'll interview a diverse group of experts -- including AI researchers, technology ethicists, disaffected computer scientists and whistleblowing investigative journalists.
+Along the way, we'll interview a diverse group of experts -- including AI researchers, technology ethicists, disaffected computer scientists, and whistleblowing investigative journalists.
 
 Set against the backdrop of Cambridge Analytica and the digital privacy scandals rocking today's news, *Stealing Ur Feelings* is a fast, fun, dizzying trip through our brand new AI-governed surveillance state...
 
@@ -46,7 +46,7 @@ Where even your own face can be used as a weapon to bias social systems, influen
 <br/><br/>
 
 #### :zap: changelog
-**01/02/2018** Interactive tech demo v2.0 is live!
+**01/02/2019** Interactive tech demo v2.0 is live!
 
 **10/24/2018** We won 
 
