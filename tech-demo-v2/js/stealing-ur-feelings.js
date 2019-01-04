@@ -1,5 +1,5 @@
 // Debug mode
-const K_DEBUG = false;
+const K_DEBUG = true;
 const K_DEBUG_SEEK_TIME = 30;
 const K_DEBUG_LOG_ALL_FRAMES = false;
 const K_DEBUG_SHOW_FRAMECODE = false;
@@ -21,6 +21,10 @@ const K_NUMBER_OF_LANDMARKS = 71;
 
 // Framewise update frequency for AR props
 const K_AR_FRAME_INTERVAL = 1;
+
+// The factor by which we downres the user video sprite before face detection
+// and pose estimation
+const K_FACE_CV_DOWNRES_FACTOR = 1;
 
 // The factor by which we downres the user video sprite for image processing effects
 // This gives us an important performance boost and also creates desirable pixelation
@@ -46,7 +50,7 @@ let frameCanvas, frame, lastFrame;
 let userVideo, filmVideo;
 
 // Refs to video sprites
-let userVideoSprite, filmSprite;
+let userVideoSprite, filmSprite, cvSprite;
 
 // Sprite masks
 let userVideoMaskQuarterRight;

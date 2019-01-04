@@ -101988,7 +101988,7 @@ Phaser.Video.prototype = {
 
         try {
             navigator.getUserMedia(
-                { "audio": captureAudio, "video": { facingMode: "user", width: { ideal: 1280 }, height: { ideal: 720 } } }, // Note our forkage here
+                { "audio": captureAudio, "video": { facingMode: "user", width: { ideal: 640 }, height: { ideal: 480 } } }, // Note our forkage here
                 this.getUserMediaSuccess.bind(this),
                 this.getUserMediaError.bind(this)
             );

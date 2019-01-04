@@ -28,7 +28,7 @@ function getFrame(filmSprite, frameCanvas) {
 }
 
 function updateCLM(clmCanvas) {
-	clmCanvas.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, 0, 0);
+	clmCanvas.copy(cvSprite, 0, 0, cvSprite.width, cvSprite.height, 0, 0, undefined, undefined, undefined, undefined, undefined, 1 / K_FACE_CV_DOWNRES_FACTOR, 1 / K_FACE_CV_DOWNRES_FACTOR);
 	clmCanvas.update();
 } 
 
@@ -127,6 +127,9 @@ const playState = {
 		textGroup = game.add.group();
 
 		userVideoSprite = game.add.sprite(0, 0, userVideo);
+
+		cvSprite = game.add.sprite(0, 0, userVideo);
+		cvSprite.visible = false;
 		
 		// Handling variance in user camera aspect ratio is a 2 step process:
 		// First we get aspect ratio of user video...
@@ -135,7 +138,7 @@ const playState = {
 		// ...and if necessary, create a backplate in the correct aspect for it
 		if (userVideoAspect < K_PROJECT_ASPECT_RATIO) {
 			userVideoBackplateBMD = game.add.bitmapData(userVideo.height * K_PROJECT_ASPECT_RATIO, userVideo.height);
-			userVideoBackplateBMD.fill(255, 255, 255, 255);
+			userVideoBackplateBMD.fill(255, 51, 255, 255);
 	 		userVideoBackplateSprite = game.add.sprite(0, 0, userVideoBackplateBMD);
 			userVideoGroup.add(userVideoBackplateSprite);
 		} else if (userVideoAspect > K_PROJECT_ASPECT_RATIO) {
@@ -144,7 +147,7 @@ const playState = {
 
 		userVideoGroup.add(userVideoSprite);
 
-		clmCanvas = game.add.bitmapData(userVideo.width, userVideo.height);
+		clmCanvas = game.add.bitmapData(cvSprite.width / K_FACE_CV_DOWNRES_FACTOR, cvSprite.height / K_FACE_CV_DOWNRES_FACTOR);
 
 		userVideoMaskQuarterRight = game.make.graphics(0, 0);
 		userVideoMaskQuarterRight.beginFill(0xFFFFFF);
@@ -152,6 +155,7 @@ const playState = {
 		userVideoMaskQuarterRight.visible = false;
 
 		userVideoSprite.mask = userVideoMaskQuarterRight;
+
 		userVideoGroup.add(userVideoMaskQuarterRight);
 
 		boundingBox = game.add.graphics(0, 0);
@@ -164,6 +168,8 @@ const playState = {
 		if (userVideoBackplateBMD) {
 			s = K_PROJECT_WIDTH / userVideoBackplateBMD.width;
 			userVideoBackplateSprite.scale.setTo(s, s);
+			userVideoBackplateSprite.mask = userVideoMaskQuarterRight;
+			userVideoSprite.scale.setTo(s, s);
 		} else {
 			s = K_PROJECT_WIDTH / userVideo.width;
 			userVideoSprite.scale.setTo(s, s);
@@ -273,6 +279,7 @@ const playState = {
 
 		playButton.events.onInputDown.addOnce(() => {
 			clmTrack.start(clmCanvas.canvas);
+			clmTrack.setResponseMode("blend", ["sobel", "lbp"]);
 
 			playButton.visible = false;
 			filmSprite.visible = true;
@@ -331,12 +338,21 @@ const playState = {
 			}
 
 			updateCLM(clmCanvas);
-			landmarks = clmTrack.getCurrentPosition();
+			const l = clmTrack.getCurrentPosition();
+			
+			if (l) {
+				// TODO: Handle CV canvas downres factor
 
-			if (landmarks) {
+				landmarks = new Array();
+
+				for (let i = 0; i < l.length; i += 1) {
+					landmarks.push([l[i][0] * userVideoSprite.scale.x / K_FACE_CV_DOWNRES_FACTOR, l[i][1] * userVideoSprite.scale.y / K_FACE_CV_DOWNRES_FACTOR]); // TODO: Does this break if user webcam dimensions !== 640:480 ?
+				}
+
 				userVideoStatusText.visible = false;
 				clmParams = clmTrack.getCurrentParameters();
 			} else {
+				landmarks = false;
 				userVideoStatusText.visible = true;
 			}
 
