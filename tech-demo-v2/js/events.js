@@ -38,7 +38,7 @@ for (let i = 1043; i < 1456; i += 1) {
 	const e = new eventStruct(() => {
 		if (landmarks) {
 			if (frame % K_AR_FRAME_INTERVAL === 0) {
-				const pline = new Phaser.Line(landmarks[27][0] + userVideoGroup.position.x, landmarks[27][1] + userVideoGroup.position.y, landmarks[32][0] + userVideoGroup.position.x, landmarks[32][1] + userVideoGroup.position.y);
+				const pline = new Phaser.Line(landmarks[27][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[27][1] + userVideoGroup.position.y + userVideoSprite.position.y, landmarks[32][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[32][1] + userVideoGroup.position.y + userVideoSprite.position.y);
 				const pd = pline.length;
 				const maskScale = pd / 280;
 				thiefMaskSprite.scale.setTo(maskScale, maskScale);
@@ -46,7 +46,7 @@ for (let i = 1043; i < 1456; i += 1) {
 				thiefMaskSprite.rotation = pline.angle;
 				thiefMaskSprite.visible = true;
 
-				const cline = new Phaser.Line(landmarks[0][0] + userVideoGroup.position.x, landmarks[0][1] + userVideoGroup.position.y, landmarks[14][0] + userVideoGroup.position.x, landmarks[14][1] + userVideoGroup.position.y);
+				const cline = new Phaser.Line(landmarks[0][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[0][1] + userVideoGroup.position.y + userVideoSprite.position.y, landmarks[14][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[14][1] + userVideoGroup.position.y + userVideoSprite.position.y);
 				const cd = cline.length;
 				const hatScale = cd / 360;
 				spyHatSprite.scale.setTo(hatScale, hatScale);
@@ -98,7 +98,7 @@ for (let i = 1464; i < 1600; i += 1) {
 			headPhysicsSprite.visible = true;
 			const s = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length / 100;
 			headPhysicsSprite.scale.setTo(s, s);
-			headPhysicsSprite.position = {x: landmarks[33][0] + userVideoGroup.position.x, y: landmarks[33][1] + userVideoGroup.position.y};
+			headPhysicsSprite.position = {x: landmarks[33][0] + userVideoGroup.position.x + userVideoSprite.position.x, y: landmarks[33][1] + userVideoGroup.position.y + userVideoSprite.position.y};
 
 			game.physics.arcade.collide(emojiEmitter, headPhysicsSprite);
 		} else {
@@ -138,7 +138,7 @@ for (let i = 2127; i < 2400; i += 1) {
 		if (landmarks) {
 			for (let j = 0; j < K_NUMBER_OF_LANDMARKS; j += 1) {
 				landmarkText[j].visible = true;
-				landmarkText[j].position = {x: landmarks[j][0] + userVideoGroup.position.x, y: landmarks[j][1] + userVideoGroup.position.y};
+				landmarkText[j].position = {x: landmarks[j][0] + userVideoGroup.position.x + userVideoSprite.position.x, y: landmarks[j][1] + userVideoGroup.position.y + userVideoSprite.position.y};
 			}
 		} else {
 			for (let j = 0; j < K_NUMBER_OF_LANDMARKS; j += 1) {
@@ -169,7 +169,7 @@ filmEventList[2401] = new eventStruct(() => {
 
 	if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
 		const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 2.25;
-		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, 0, 0, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
 		userVideoProcessedBMD.update();
 
 		userVideoProcessedBMD.processPixelRGB((pixel) => {
@@ -188,7 +188,7 @@ for (let i = 2402; i < 2520; i += 1) {
 
 		if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
 			const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 2.25;
-			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, 0, 0, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
 			userVideoProcessedBMD.update();
 
 			userVideoProcessedBMD.processPixelRGB((pixel) => {
@@ -211,7 +211,7 @@ filmEventList[2520] = new eventStruct(() => {
 
 	if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
 		const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 2.25;
-		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, 0, 0, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
 		userVideoProcessedBMD.update();
 
 		userVideoProcessedBMD.processPixelRGB((pixel) => {
@@ -235,7 +235,7 @@ for (let i = 2521; i < 2634; i += 1) {
 
 		if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
 			const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 2.25;
-			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, 0, 0, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
 			userVideoProcessedBMD.update();
 
 			userVideoProcessedBMD.processPixelRGB((pixel) => {
@@ -262,7 +262,7 @@ for (let i = 2634; i < 2693; i += 1) {
 
 		if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
 			const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 2.25;
-			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, 0, 0, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
 			userVideoProcessedBMD.update();
 
 			userVideoProcessedBMD.processPixelRGB((pixel) => {
@@ -281,8 +281,8 @@ for (let i = 2634; i < 2693; i += 1) {
 		boundingBox.lineStyle(5, 0x80ff00, 1);
 
 		if (landmarks) {
-			const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length * 1.3;
-			boundingBox.position = {x: landmarks[62][0] + userVideoGroup.position.x - (size / 2), y: landmarks[62][1] + userVideoGroup.position.y - (size / 2)};
+			const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length;
+			boundingBox.position = {x: landmarks[62][0] + userVideoGroup.position.x + userVideoSprite.position.x - (size / 2), y: landmarks[62][1] + userVideoGroup.position.y + userVideoSprite.position.y - (size / 2)};
 			boundingBox.drawRect(0, 0, size, size);
 		}
 		
@@ -305,7 +305,7 @@ filmEventList[2693] = new eventStruct(() => {
 
 	if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
 		const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 2.25;
-		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+		userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, 0, 0, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
 		userVideoProcessedBMD.update();
 
 		userVideoProcessedBMD.processPixelRGB((pixel) => {
@@ -324,8 +324,8 @@ filmEventList[2693] = new eventStruct(() => {
 	boundingBox.lineStyle(5, 0x80ff00, 1);
 
 	if (landmarks) {
-		const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length * 1.3;
-		boundingBox.position = {x: landmarks[62][0] + userVideoGroup.position.x - (size / 2), y: landmarks[62][1] + userVideoGroup.position.y - (size / 2)};
+		const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length;
+		boundingBox.position = {x: landmarks[62][0] + userVideoGroup.position.x + userVideoSprite.position.x - (size / 2), y: landmarks[62][1] + userVideoGroup.position.y + userVideoSprite.position.y - (size / 2)};
 		boundingBox.drawRect(0, 0, size, size);
 	}
 	
@@ -338,7 +338,7 @@ for (let i = 2694; i < 2724; i += 1) {
 
 		if (frame % K_VIDEO_PROCESSING_FRAME_INTERVAL === 0) {
 			const s = 1 / K_VIDEO_PROCESSING_DOWNRES_FACTOR * 2.25;
-			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, undefined, undefined, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
+			userVideoProcessedBMD.copy(userVideoSprite, 0, 0, userVideoSprite.width, userVideoSprite.height, 0, 0, undefined, undefined, undefined, undefined, undefined, s, s, undefined, null, true);
 			userVideoProcessedBMD.update();
 
 			userVideoProcessedBMD.processPixelRGB((pixel) => {
@@ -357,8 +357,8 @@ for (let i = 2694; i < 2724; i += 1) {
 		boundingBox.lineStyle(5, 0x80ff00, 1);
 		
 		if (landmarks) {
-			const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length * 1.3;
-			boundingBox.position = {x: landmarks[62][0] + userVideoGroup.position.x - (size / 2), y: landmarks[62][1] + userVideoGroup.position.y - (size / 2)};
+			const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length;
+			boundingBox.position = {x: landmarks[62][0] + userVideoGroup.position.x + userVideoSprite.position.x - (size / 2), y: landmarks[62][1] + userVideoGroup.position.y + userVideoSprite.position.y - (size / 2)};
 			boundingBox.drawRect(0, 0, size, size);
 		}
 		

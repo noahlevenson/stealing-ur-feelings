@@ -126,14 +126,14 @@ const playState = {
 		overlayGroup = game.add.group();
 		textGroup = game.add.group();
 
-		userVideoSprite = game.add.sprite(0, 0, userVideo);
-
 		cvSprite = game.add.sprite(0, 0, userVideo);
 		cvSprite.visible = false;
 		
 		// Handling variance in user camera aspect ratio is a 2 step process:
 		// First we get aspect ratio of user video...
 		userVideoAspect = userVideo.width / userVideo.height;
+
+		userVideoSprite = game.add.sprite(0, 0, userVideo);
 
 		// ...and if necessary, create a backplate in the correct aspect for it
 		if (userVideoAspect < K_PROJECT_ASPECT_RATIO) {
@@ -174,6 +174,8 @@ const playState = {
 			s = K_PROJECT_WIDTH / userVideo.width;
 			userVideoSprite.scale.setTo(s, s);
 		}
+
+		userVideoSprite.position = {x: K_PROJECT_WIDTH / 2 - (userVideoSprite.width / 2), y: 0};
 		
 		filmVideo = game.add.video("film");
 		filmSprite = game.add.sprite(0, 0, filmVideo);
@@ -186,6 +188,7 @@ const playState = {
 		userVideoProcessedSprite.visible = false;
 		userVideoProcessedSprite.mask = userVideoMaskQuarterRight;
 		userVideoProcessedSprite.scale.setTo(K_VIDEO_PROCESSING_DOWNRES_FACTOR, K_VIDEO_PROCESSING_DOWNRES_FACTOR);
+		userVideoProcessedSprite.position = {x: K_PROJECT_WIDTH / 2 - (userVideoSprite.width / 2), y: 0};
 		userVideoGroup.add(userVideoProcessedSprite);
 
 		userVideoSprite.visible = false;
@@ -224,7 +227,7 @@ const playState = {
 		userVideoStatusText.visible = false;
 		userVideoGroup.add(userVideoStatusText);
 
-		faceModel = game.add.graphics(0, 0);
+		faceModel = game.add.graphics(K_PROJECT_WIDTH / 2 - (userVideoSprite.width / 2), 0);
 		faceModel.lineStyle(3, 0x80ff00, 1);
 		faceModel.visible = false;
 		userVideoGroup.add(faceModel);
