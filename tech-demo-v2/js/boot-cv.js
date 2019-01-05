@@ -17,7 +17,7 @@ const bootCVState = {
 			}
 		}, 500);
 
-		const detectorModel = faceapi.loadTinyFaceDetectorModel("../lib/models")
+		const detectorModel = faceapi.loadTinyFaceDetectorModel("../tech-demo-v2/lib/models")
 		// faceapi.loadSsdMobilenetv1Model("../tech-demo-v2/lib/models")
 
 		detectorModel.then(() => {
