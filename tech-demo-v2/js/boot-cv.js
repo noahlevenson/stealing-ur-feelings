@@ -17,8 +17,8 @@ const bootCVState = {
 			}
 		}, 500);
 
-		const detectorModel = faceapi.loadSsdMobilenetv1Model("../tech-demo-v2/lib/models")
-		// faceapi.loadTinyFaceDetectorModel("../lib/models")
+		const detectorModel = faceapi.loadTinyFaceDetectorModel("../lib/models")
+		// faceapi.loadSsdMobilenetv1Model("../tech-demo-v2/lib/models")
 
 		detectorModel.then(() => {
 			initText.text = "Initializing assets 2/3";
