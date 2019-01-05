@@ -333,34 +333,36 @@ const playState = {
 				}
 			}
 
-			updateCLM(clmCanvas);
+			if (frame % K_CV_REFRESH_INTERVAL === 0) {
+				updateCLM(clmCanvas);
 	
-			const options = new faceapi.TinyFaceDetectorOptions({inputSize: 416, scoreThreshold: 0.5});
-			const detections = faceapi.detectSingleFace(clmCanvas.canvas, options).withFaceExpressions().withFaceLandmarks();
+				const options = new faceapi.TinyFaceDetectorOptions({inputSize: 416, scoreThreshold: 0.5});
+				const detections = faceapi.detectSingleFace(clmCanvas.canvas, options).withFaceExpressions().withFaceLandmarks();
 
-			detections.then((result) => {
-				if (result) {
-					// TODO: Handle CV canvas downres factor?
+				detections.then((result) => {
+					if (result) {
+						// TODO: Handle CV canvas downres factor?
 
-					const l = result.landmarks._positions;
+						const l = result.landmarks._positions;
 
-					landmarks = new Array();
+						landmarks = new Array();
 
-					for (let i = 0; i < l.length; i += 1) {
-						landmarks.push([l[i].x * userVideoSprite.scale.x / K_FACE_CV_DOWNRES_FACTOR, l[i].y * userVideoSprite.scale.y / K_FACE_CV_DOWNRES_FACTOR]); // TODO: Does this break if user webcam dimensions !== 640:480 ?
+						for (let i = 0; i < l.length; i += 1) {
+							landmarks.push([l[i].x * userVideoSprite.scale.x / K_FACE_CV_DOWNRES_FACTOR, l[i].y * userVideoSprite.scale.y / K_FACE_CV_DOWNRES_FACTOR]); // TODO: Does this break if user webcam dimensions !== 640:480 ?
+						}
+
+						marshalEmotions(result.expressions, viewerEmotions);
+
+						emotions = result.expressions;
+						userVideoStatusText.visible = false;
+					} else {
+						landmarks = false;
+						emotions = false;
+						userVideoStatusText.visible = true;
 					}
-
-					marshalEmotions(result.expressions, viewerEmotions);
-
-					emotions = result.expressions;
-					userVideoStatusText.visible = false;
-				} else {
-					landmarks = false;
-					emotions = false;
-					userVideoStatusText.visible = true;
-				}
-			});
-
+				});
+			}
+			
 			doEvent(filmEventList, frame);
 			lastFrame = frame;
 

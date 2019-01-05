@@ -24,7 +24,7 @@ const bootCVState = {
 			initText.text = "Initializing assets 2/3";
 
 			const landmarkModel = faceapi.loadFaceLandmarkModel("../tech-demo-v2/lib/models");
-
+		
 			landmarkModel.then(() => {
 				initText.text = "Initializing assets 3/3";
 

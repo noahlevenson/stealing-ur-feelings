@@ -19,7 +19,10 @@ const K_FRAMECODE_BIT_DEPTH = 16;
 // Number of landmarks fitted by our facial pose estimation model
 const K_NUMBER_OF_LANDMARKS = 68;
 
-// Framewise update frequency for AR props
+// Global refresh rate for all computer vision processes
+const K_CV_REFRESH_INTERVAL = 2;
+
+// Framewise update frequency for certain AR props
 const K_AR_FRAME_INTERVAL = 1;
 
 // The factor by which we downres the user video sprite before face detection
@@ -128,7 +131,7 @@ const cfg = {
 	multiTexture: false,
 	parent: "the-film",
 	enableDebug: false,
-	renderer: Phaser.CANVAS,
+	renderer: Phaser.AUTO,
 	antialias: true,
 };
 
