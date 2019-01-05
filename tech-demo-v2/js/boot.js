@@ -4,9 +4,6 @@ const bootState = {
 	}, 
 
 	create: function() {
-		delete emotionModel["disgusted"];
-		delete emotionModel["fear"];
-		
 		// game.time.advancedTiming = true;
 		// game.time.desiredFps = 30; 
 

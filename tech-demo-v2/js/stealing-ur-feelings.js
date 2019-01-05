@@ -1,5 +1,5 @@
 // Debug mode
-const K_DEBUG = true;
+const K_DEBUG = false;
 const K_DEBUG_SEEK_TIME = 30;
 const K_DEBUG_LOG_ALL_FRAMES = false;
 const K_DEBUG_SHOW_FRAMECODE = false;
@@ -17,7 +17,7 @@ const K_PROJECT_ASPECT_RATIO = K_PROJECT_WIDTH / K_PROJECT_HEIGHT;
 const K_FRAMECODE_BIT_DEPTH = 16;
 
 // Number of landmarks fitted by our facial pose estimation model
-const K_NUMBER_OF_LANDMARKS = 71;
+const K_NUMBER_OF_LANDMARKS = 68;
 
 // Framewise update frequency for AR props
 const K_AR_FRAME_INTERVAL = 1;
@@ -34,14 +34,14 @@ const K_VIDEO_PROCESSING_DOWNRES_FACTOR = 4;
 const K_VIDEO_PROCESSING_FRAME_INTERVAL = 4;
 
 // Points describe paths in our landmarks array to draw corresponding features
-const K_FACE_OUTLINE = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-const K_FACE_MOUTH = [44, 45, 46, 47, 48, 49, 50, 59, 60, 61, 44, 56, 57, 58, 50, 51, 52, 53, 54, 55, 44];
-const K_FACE_SEPTUM = [33, 41, 62];
-const K_FACE_NOSE = [34, 35, 36, 42, 37, 43, 38, 39, 40];
-const K_FACE_LEFT_EYE = [23, 63, 24, 64, 25, 65, 26, 66, 23];
-const K_FACE_RIGHT_EYE = [30, 68, 29, 67, 28, 70, 31, 69, 30];
-const K_FACE_LEFT_BROW = [19, 20, 21, 22];
-const K_FACE_RIGHT_BROW = [18, 17, 16, 15];
+const K_FACE_OUTLINE = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+const K_FACE_MOUTH = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 60];
+const K_FACE_SEPTUM = [27, 28, 29, 30];
+const K_FACE_NOSE = [31, 32, 33, 34, 35];
+const K_FACE_LEFT_EYE = [36, 37, 38, 39, 40, 41, 36];
+const K_FACE_RIGHT_EYE = [42, 43, 44, 45, 46, 47, 42];
+const K_FACE_LEFT_BROW = [17, 18, 19, 20, 21];
+const K_FACE_RIGHT_BROW = [22, 23, 24, 25, 26];
 
 // For framecode system
 let frameCanvas, frame, lastFrame;
@@ -59,7 +59,7 @@ let userVideoMaskQuarterRight;
 let boundingBox, faceModel, emotionChart, dimmerScreen;
 
 // For text rendering
-const landmarkText = new Array(71);
+const landmarkText = new Array(K_NUMBER_OF_LANDMARKS);
 let angerText, userVideoStatusText, angryLabelText, sadLabelText, surprisedLabelText, happyLabelText;
 
 // Sound effects
@@ -78,7 +78,7 @@ let emojiEmitter;
 let userVideoBackplateBMD, userVideoBackplateSprite;
 
 // For facial landmark and emotion detection
-let landmarks, clmParams, clmTrack, clmCanvas, ec, emotionData;
+let landmarks, clmCanvas, emotions;
 
 // For user video image processing effects
 let userVideoProcessedBMD, userVideoProcessedSprite;
@@ -99,7 +99,7 @@ let playButton;
 let activated = false;
 let startTime = 0;
 
-// Instances of viewer emotions
+// Identifier for each playthrough's instanced emotionStruct
 let viewerEmotions;
 
 // Data structure for collecting viewer emotions

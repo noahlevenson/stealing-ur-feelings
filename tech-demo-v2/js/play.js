@@ -32,19 +32,11 @@ function updateCLM(clmCanvas) {
 	clmCanvas.update();
 } 
 
-function getEmotions(emotionStruct) {
-	if (landmarks) {
-		const emotions = ec.meanPredict(clmParams);
-
-		if (emotions) {
-			emotionStruct.angry.push(emotions[0]["value"]);
-			emotionStruct.sad.push(emotions[1]["value"]);
-			emotionStruct.surprised.push(emotions[2]["value"]);
-			emotionStruct.happy.push(emotions[3]["value"]);
-		}
-
-		return emotions || false;
-	}	
+function marshalEmotions(expressions, emotionStruct) {
+	emotionStruct.angry.push(expressions[3]["probability"]);
+	emotionStruct.sad.push(expressions[2]["probability"]);
+	emotionStruct.surprised.push(expressions[6]["probability"]);
+	emotionStruct.happy.push(expressions[1]["probability"]);
 }
 
 function drawFaceModel(landmarks) {
@@ -71,17 +63,16 @@ function drawFaceModel(landmarks) {
 	}
 }
 
-function drawEmotionChart(emotionStruct) {
-	const emotions = getEmotions(emotionStruct);
+function drawEmotionChart() {
 	if (emotions) {
 		emotionChart.visible = true;
 		emotionChart.clear();
 		emotionChart.beginFill(0x80ff00);
 
-		const angryy = -150 * emotions[0]["value"];
-		const sady = -150 * emotions[1]["value"];
-		const surprisedy = -150 * emotions[2]["value"];
-		const happyy = -150 * emotions[3]["value"];
+		const angryy = -220 * emotions[3]["probability"];
+		const sady = -220 * emotions[2]["probability"];
+		const surprisedy = -220 * emotions[6]["probability"];
+		const happyy = -220 * emotions[1]["probability"];
 		
 		emotionChart.drawRect(10, K_PROJECT_HEIGHT, 227.5, angryy);
 		emotionChart.drawRect(247.5, K_PROJECT_HEIGHT, 227.5, sady);
@@ -281,9 +272,6 @@ const playState = {
 		playButton.inputEnabled = true;
 
 		playButton.events.onInputDown.addOnce(() => {
-			clmTrack.start(clmCanvas.canvas);
-			clmTrack.setResponseMode("blend", ["sobel", "lbp"]);
-
 			playButton.visible = false;
 			filmSprite.visible = true;
 
@@ -291,9 +279,13 @@ const playState = {
 
 			startTime = game.time.now;
 
-			filmVideo.play();
+			updateCLM(clmCanvas);
+			const detections = faceapi.detectSingleFace(clmCanvas.canvas).withFaceExpressions().withFaceLandmarks();
+			detections.then(() => {
+				filmVideo.play();
 
-			activated = true;
+				activated = true;
+			})
 		});
 
 		if (K_DEBUG) {
@@ -341,23 +333,31 @@ const playState = {
 			}
 
 			updateCLM(clmCanvas);
-			const l = clmTrack.getCurrentPosition();
-			
-			if (l) {
-				// TODO: Handle CV canvas downres factor
+	
+			const detections = faceapi.detectSingleFace(clmCanvas.canvas).withFaceExpressions().withFaceLandmarks();
 
-				landmarks = new Array();
+			detections.then((result) => {
+				if (result) {
+					// TODO: Handle CV canvas downres factor?
 
-				for (let i = 0; i < l.length; i += 1) {
-					landmarks.push([l[i][0] * userVideoSprite.scale.x / K_FACE_CV_DOWNRES_FACTOR, l[i][1] * userVideoSprite.scale.y / K_FACE_CV_DOWNRES_FACTOR]); // TODO: Does this break if user webcam dimensions !== 640:480 ?
+					const l = result.landmarks._positions;
+
+					landmarks = new Array();
+
+					for (let i = 0; i < l.length; i += 1) {
+						landmarks.push([l[i].x * userVideoSprite.scale.x / K_FACE_CV_DOWNRES_FACTOR, l[i].y * userVideoSprite.scale.y / K_FACE_CV_DOWNRES_FACTOR]); // TODO: Does this break if user webcam dimensions !== 640:480 ?
+					}
+
+					marshalEmotions(result.expressions, viewerEmotions);
+
+					emotions = result.expressions;
+					userVideoStatusText.visible = false;
+				} else {
+					landmarks = false;
+					emotions = false;
+					userVideoStatusText.visible = true;
 				}
-
-				userVideoStatusText.visible = false;
-				clmParams = clmTrack.getCurrentParameters();
-			} else {
-				landmarks = false;
-				userVideoStatusText.visible = true;
-			}
+			});
 
 			doEvent(filmEventList, frame);
 			lastFrame = frame;

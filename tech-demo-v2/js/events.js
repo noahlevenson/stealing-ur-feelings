@@ -12,15 +12,6 @@ function doEvent(eventList, frame) {
 
 const filmEventList = new Array(4566);
 
-// Just collect user emotions
-for (let i = 1; i < 743; i += 1) {
-	const e = new eventStruct(() => {
-		const emotions = getEmotions(viewerEmotions);
-	});
-
-	filmEventList[i] = e;
-}
-
 filmEventList[743] = new eventStruct(() => {
 	const filmSlideRight = game.add.tween(filmSprite.position).to( {x: K_PROJECT_WIDTH / 4, y: 0}, 200, Phaser.Easing.Linear.None, true, 0, 0, false);
 
@@ -29,8 +20,6 @@ filmEventList[743] = new eventStruct(() => {
 	userVideoMaskQuarterRight.visible = true;
 
 	const userVideoSlideRight = game.add.tween(userVideoGroup.position).to( {x: -(K_PROJECT_WIDTH / 4), y: 0}, 200, Phaser.Easing.Linear.None, true, 0, 0, false);
-
-	const emotions = getEmotions(viewerEmotions);
 });
 
 // Turn on "spy" AR filter
@@ -38,7 +27,26 @@ for (let i = 1043; i < 1456; i += 1) {
 	const e = new eventStruct(() => {
 		if (landmarks) {
 			if (frame % K_AR_FRAME_INTERVAL === 0) {
-				const pline = new Phaser.Line(landmarks[27][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[27][1] + userVideoGroup.position.y + userVideoSprite.position.y, landmarks[32][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[32][1] + userVideoGroup.position.y + userVideoSprite.position.y);
+				// Pupils as centroids of eye shapes
+				let leftPupil = [0, 0];
+				for (let j = 0; j < K_FACE_LEFT_EYE.length - 1; j += 1) {
+					leftPupil[0] += landmarks[K_FACE_LEFT_EYE[j]][0];
+					leftPupil[1] += landmarks[K_FACE_LEFT_EYE[j]][1];
+				}
+
+				leftPupil[0] /= K_FACE_LEFT_EYE.length - 1;
+				leftPupil[1] /= K_FACE_LEFT_EYE.length - 1;
+
+				let rightPupil = [0, 0];
+				for (let j = 0; j < K_FACE_RIGHT_EYE.length - 1; j += 1) {
+					rightPupil[0] += landmarks[K_FACE_RIGHT_EYE[j]][0];
+					rightPupil[1] += landmarks[K_FACE_RIGHT_EYE[j]][1];
+				}
+
+				rightPupil[0] /= K_FACE_RIGHT_EYE.length - 1;
+				rightPupil[1] /= K_FACE_RIGHT_EYE.length - 1;
+
+				const pline = new Phaser.Line(leftPupil[0] + userVideoGroup.position.x + userVideoSprite.position.x, leftPupil[1] + userVideoGroup.position.y + userVideoSprite.position.y, rightPupil[0] + userVideoGroup.position.x + userVideoSprite.position.x, rightPupil[1] + userVideoGroup.position.y + userVideoSprite.position.y);
 				const pd = pline.length;
 				const maskScale = pd / 280;
 				thiefMaskSprite.scale.setTo(maskScale, maskScale);
@@ -46,7 +54,7 @@ for (let i = 1043; i < 1456; i += 1) {
 				thiefMaskSprite.rotation = pline.angle;
 				thiefMaskSprite.visible = true;
 
-				const cline = new Phaser.Line(landmarks[0][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[0][1] + userVideoGroup.position.y + userVideoSprite.position.y, landmarks[14][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[14][1] + userVideoGroup.position.y + userVideoSprite.position.y);
+				const cline = new Phaser.Line(landmarks[0][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[0][1] + userVideoGroup.position.y + userVideoSprite.position.y, landmarks[16][0] + userVideoGroup.position.x + userVideoSprite.position.x, landmarks[16][1] + userVideoGroup.position.y + userVideoSprite.position.y);
 				const cd = cline.length;
 				const hatScale = cd / 360;
 				spyHatSprite.scale.setTo(hatScale, hatScale);
@@ -61,8 +69,6 @@ for (let i = 1043; i < 1456; i += 1) {
 			spyHatSprite.visible = false;
 			thiefMaskSprite.visible = false;
 		}
-
-		const emotions = getEmotions(viewerEmotions);
 	});
 
 	filmEventList[i] = e;
@@ -87,8 +93,6 @@ filmEventList[1463] = new eventStruct(() => {
 	explosionSFX.play();
 
 	emojiEmitter.flow(3300, 10, 5, 400, true);
-
-	const emotions = getEmotions(viewerEmotions);
 });
 
 // Turn on the invisible head physics collider and persist it as the emojis fall
@@ -96,7 +100,7 @@ for (let i = 1464; i < 1600; i += 1) {
 	const e = new eventStruct(() => {
 		if (landmarks) {
 			headPhysicsSprite.visible = true;
-			const s = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length / 100;
+			const s = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[16][0], landmarks[16][1]).length / 100;
 			headPhysicsSprite.scale.setTo(s, s);
 			headPhysicsSprite.position = {x: landmarks[33][0] + userVideoGroup.position.x + userVideoSprite.position.x, y: landmarks[33][1] + userVideoGroup.position.y + userVideoSprite.position.y};
 
@@ -104,8 +108,6 @@ for (let i = 1464; i < 1600; i += 1) {
 		} else {
 			headPhysicsSprite.visible = false;
 		}
-
-		const emotions = getEmotions(viewerEmotions);
 	});
 
 	filmEventList[i] = e;
@@ -117,8 +119,6 @@ filmEventList[1600] = new eventStruct(() => {
 	const userVideoSlideLeft = game.add.tween(userVideoGroup.position).to( {x: -(K_PROJECT_WIDTH * 0.75), y: 0}, 200, Phaser.Easing.Linear.None, true, 0, 0, false);
 
 	headPhysicsSprite.visible = false;
-
-	const emotions = getEmotions(viewerEmotions);
 });
 
 // Return to 50/50 split with user video
@@ -128,8 +128,6 @@ filmEventList[2097] = new eventStruct(() => {
 	userVideoGroup.position.x = -(K_PROJECT_WIDTH * 0.75);
 	userVideoSprite.visible = true;
 	const userVideoSlideRight = game.add.tween(userVideoGroup.position).to( {x: -(K_PROJECT_WIDTH / 4), y: 0}, 200, Phaser.Easing.Linear.None, true, 0, 0, false);
-
-	const emotions = getEmotions(viewerEmotions);
 });
 
 // Put enumerated facial landmarks over the user and track their movement
@@ -145,8 +143,6 @@ for (let i = 2127; i < 2400; i += 1) {
 				landmarkText[j].visible = false;
 			}
 		}
-
-		const emotions = getEmotions(viewerEmotions);
 	});
 
 	filmEventList[i] = e;
@@ -157,8 +153,6 @@ filmEventList[2400] = new eventStruct(() => {
 	for (let j = 0; j < K_NUMBER_OF_LANDMARKS; j += 1) {
 		game.add.tween(landmarkText[j]).to({alpha: 0}, 2000, Phaser.Easing.Linear.None, true, 0, 0, false);
 	}
-
-	const emotions = getEmotions(viewerEmotions);
 });
 
 // Play a beep and begin luma filter
@@ -177,8 +171,6 @@ filmEventList[2401] = new eventStruct(() => {
 			return {r: luma, g: luma, b: luma, a: 255};		
 		}, this);
 	}
-		
-	const emotions = getEmotions(viewerEmotions);
 });
 
 // Continue luma filter
@@ -196,8 +188,6 @@ for (let i = 2402; i < 2520; i += 1) {
 				return {r: luma, g: luma, b: luma, a: 255};		
 			}, this);	
 		}
-		
-		const emotions = getEmotions(viewerEmotions);
 	});
 
 	filmEventList[i] = e;
@@ -224,8 +214,6 @@ filmEventList[2520] = new eventStruct(() => {
 			}	
 		}, this);	
 	}
-	
-	const emotions = getEmotions(viewerEmotions);
 });
 
 // Continue threshold filter
@@ -248,8 +236,6 @@ for (let i = 2521; i < 2634; i += 1) {
 				}	
 			}, this);	
 		}
-		
-		const emotions = getEmotions(viewerEmotions);
 	});
 
 	filmEventList[i] = e;
@@ -281,12 +267,10 @@ for (let i = 2634; i < 2693; i += 1) {
 		boundingBox.lineStyle(5, 0x80ff00, 1);
 
 		if (landmarks) {
-			const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length;
-			boundingBox.position = {x: landmarks[62][0] + userVideoGroup.position.x + userVideoSprite.position.x - (size / 2), y: landmarks[62][1] + userVideoGroup.position.y + userVideoSprite.position.y - (size / 2)};
+			const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[16][0], landmarks[16][1]).length;
+			boundingBox.position = {x: landmarks[33][0] + userVideoGroup.position.x + userVideoSprite.position.x - (size / 2), y: landmarks[33][1] + userVideoGroup.position.y + userVideoSprite.position.y - (size / 2)};
 			boundingBox.drawRect(0, 0, size, size);
 		}
-		
-		const emotions = getEmotions(viewerEmotions);
 	});
 
 	filmEventList[i] = e;
@@ -324,12 +308,10 @@ filmEventList[2693] = new eventStruct(() => {
 	boundingBox.lineStyle(5, 0x80ff00, 1);
 
 	if (landmarks) {
-		const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length;
-		boundingBox.position = {x: landmarks[62][0] + userVideoGroup.position.x + userVideoSprite.position.x - (size / 2), y: landmarks[62][1] + userVideoGroup.position.y + userVideoSprite.position.y - (size / 2)};
+		const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[16][0], landmarks[16][1]).length;
+		boundingBox.position = {x: landmarks[33][0] + userVideoGroup.position.x + userVideoSprite.position.x - (size / 2), y: landmarks[33][1] + userVideoGroup.position.y + userVideoSprite.position.y - (size / 2)};
 		boundingBox.drawRect(0, 0, size, size);
 	}
-	
-	const emotions = getEmotions(viewerEmotions);
 });
 
 for (let i = 2694; i < 2724; i += 1) {
@@ -357,12 +339,10 @@ for (let i = 2694; i < 2724; i += 1) {
 		boundingBox.lineStyle(5, 0x80ff00, 1);
 		
 		if (landmarks) {
-			const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[14][0], landmarks[14][1]).length;
-			boundingBox.position = {x: landmarks[62][0] + userVideoGroup.position.x + userVideoSprite.position.x - (size / 2), y: landmarks[62][1] + userVideoGroup.position.y + userVideoSprite.position.y - (size / 2)};
+			const size = new Phaser.Line(landmarks[0][0], landmarks[0][1], landmarks[16][0], landmarks[16][1]).length;
+			boundingBox.position = {x: landmarks[33][0] + userVideoGroup.position.x + userVideoSprite.position.x - (size / 2), y: landmarks[33][1] + userVideoGroup.position.y + userVideoSprite.position.y - (size / 2)};
 			boundingBox.drawRect(0, 0, size, size);
 		}
-		
-		const emotions = getEmotions(viewerEmotions);
 	});
 
 	filmEventList[i] = e;
@@ -385,9 +365,13 @@ filmEventList[2860] = new eventStruct(() => {
 
 for (let i = 2861; i < 3167; i += 1) {
 	const e = new eventStruct(() => {
-		const pct = (viewerEmotions.avg("happy") * 100).toFixed(0);
+		let pct = (viewerEmotions.avg("happy") * 1000);
+
+		if (pct > 100) {
+			pct = 100;
+		}
 		const elapsed = ((game.time.now - startTime) / 1000).toFixed(2);
-		angerText.text = "You've been an average of " + pct + "% happy for the last " + elapsed + " seconds.";
+		angerText.text = "You've been an average of " + pct.toFixed(0) + "% happy for the last " + elapsed + " seconds.";
 	});
 
 	filmEventList[i] = e;
@@ -468,15 +452,22 @@ for (let i = 4159; i < 4307; i += 1) {
 		angerText.setStyle({fontSize: "70px", fill: "#FFFFFF", backgroundColor: "#000000"}, true);
 		angerText.visible = true;
 
-		let emotions;
-
-		if (landmarks) {
-			emotions = getEmotions(viewerEmotions);
-		}
-
 		if (emotions) {
-			const pct = (emotions[0]["value"] * 100).toFixed(2);
-			angerText.text = "You are " + pct + "% angry about Trump.";
+			// Get simple moving average for n = 100
+			let acc = 0;
+			for (let j = 100; j > -1; j -= 1) {
+				acc += viewerEmotions.angry[viewerEmotions.angry.length - 1 - j];
+			}
+
+			acc /= 100;
+
+			let pct = acc * 10000;
+
+			if (pct > 100) {
+				pct = 100;
+			} 
+
+			angerText.text = "You are " + pct.toFixed(0) + "% angry about Trump.";
 		} else {
 			angerText.text = "face camera + check light to be classified";
 		}
