@@ -467,7 +467,7 @@ for (let i = 4159; i < 4307; i += 1) {
 				pct = 100;
 			} 
 
-			angerText.text = "You are " + pct.toFixed(0) + "% angry about Trump.";
+			angerText.text = "You are " + pct.toFixed(2) + "% angry about Trump.";
 		} else {
 			angerText.text = "face camera + check light to be classified";
 		}
