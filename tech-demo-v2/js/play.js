@@ -280,7 +280,8 @@ const playState = {
 			startTime = game.time.now;
 
 			updateCLM(clmCanvas);
-			const detections = faceapi.detectSingleFace(clmCanvas.canvas).withFaceExpressions().withFaceLandmarks();
+			const options = new faceapi.TinyFaceDetectorOptions({inputSize: 416, scoreThreshold: 0.5});
+			const detections = faceapi.detectSingleFace(clmCanvas.canvas, options).withFaceExpressions().withFaceLandmarks();
 			detections.then(() => {
 				filmVideo.play();
 
@@ -334,7 +335,8 @@ const playState = {
 
 			updateCLM(clmCanvas);
 	
-			const detections = faceapi.detectSingleFace(clmCanvas.canvas).withFaceExpressions().withFaceLandmarks();
+			const options = new faceapi.TinyFaceDetectorOptions({inputSize: 416, scoreThreshold: 0.5});
+			const detections = faceapi.detectSingleFace(clmCanvas.canvas, options).withFaceExpressions().withFaceLandmarks();
 
 			detections.then((result) => {
 				if (result) {

@@ -365,7 +365,7 @@ filmEventList[2860] = new eventStruct(() => {
 
 for (let i = 2861; i < 3167; i += 1) {
 	const e = new eventStruct(() => {
-		let pct = (viewerEmotions.avg("happy") * 1000);
+		let pct = (viewerEmotions.avg("happy") * 100);
 
 		if (pct > 100) {
 			pct = 100;
@@ -461,7 +461,7 @@ for (let i = 4159; i < 4307; i += 1) {
 
 			acc /= 100;
 
-			let pct = acc * 10000;
+			let pct = acc * 100;
 
 			if (pct > 100) {
 				pct = 100;
