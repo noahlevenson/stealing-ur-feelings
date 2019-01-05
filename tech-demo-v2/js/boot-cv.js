@@ -17,18 +17,18 @@ const bootCVState = {
 			}
 		}, 500);
 
-		const detectorModel = faceapi.loadSsdMobilenetv1Model("../lib/models")
+		const detectorModel = faceapi.loadSsdMobilenetv1Model("../tech-demo-v2/lib/models")
 		// faceapi.loadTinyFaceDetectorModel("../lib/models")
 
 		detectorModel.then(() => {
 			initText.text = "Initializing assets 2/3";
 
-			const landmarkModel = faceapi.loadFaceLandmarkModel("../lib/models");
+			const landmarkModel = faceapi.loadFaceLandmarkModel("../tech-demo-v2/lib/models");
 
 			landmarkModel.then(() => {
 				initText.text = "Initializing assets 3/3";
 
-				const expressionModel = faceapi.loadFaceExpressionModel("../lib/models");
+				const expressionModel = faceapi.loadFaceExpressionModel("../tech-demo-v2/lib/models");
 
 				expressionModel.then(() => {
 					clearInterval(animInterval);
