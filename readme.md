@@ -2,11 +2,9 @@
 
 ### STEALING UR FEELINGS
 
-There's a new weapon in the battle for your private data...
+Meet the exciting new AI that knows you better than you know yourself.
 
-And it's aimed at the front of your head.
-
-*Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps are using facial emotion recognition technology to profit from your grief, promote inequality, and endanger American democracy.
+*Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps are using facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy.
 
 It's supported by a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
 
@@ -18,21 +16,21 @@ In the mid-2010s, tech corporations' worsening addiction to our personal data se
 
 The result was a new kind of artificial intelligence that could harvest our data faster, more accurately, and more stealthily than ever before:
 
-Facial emotion recognition.  Algorithms that can determine how you feel just by analyzing your face. 
+Facial emotion recognition. Algorithms that can determine how you feel just by analyzing your face. 
 
 Suddenly, there was the perfect tool to extract even more data from us, all the time, everywhere -- even when we're not scrolling, typing, or clicking.
 
 And, as revealed in recently approved patents, it's in the hands of the very corporations who seek to profit by doing the most harm.
 
-Now, for the first time ever, go inside the apps we show our faces to every day -- from Skype to Snapchat to Instagram to TikTok -- and see your own digital life through the eyes of artificial intelligence.  
+Now, for the first time ever, go inside the apps we show our faces to every day -- from Snapchat to Instagram to TikTok -- and see your own digital life through the eyes of artificial intelligence.  
 
-Using a combination of AR, filmed content, and interactive game mechanics, we'll reveal the science of machine learning-based facial feature tracking, demystify the algorithms that determine if you're happy or sad, and reveal the tech bros' plans to get filthy rich -- and rig the game against you -- by correlating your emotions with your geographic location.
+Using a combination of AR, filmed content, and interactive game mechanics, we'll explain the science of facial feature tracking,  demystify the algorithms that determine if you're happy or sad, and reveal the tech corporations' patented plans to make billions by analyzing (and selling) your reactions at public events.
 
-Along the way, we'll interview a diverse group of experts -- including AI researchers, technology ethicists, disaffected computer scientists, and whistleblowing investigative journalists.
+Along the way, we'll use the very same technology to exploit your reaction to our own content in some pretty horrifying ways.
 
-Set against the backdrop of Cambridge Analytica and the digital privacy scandals rocking today's news, *Stealing Ur Feelings* is a fast, fun, dizzying trip through our brand new AI-governed surveillance state...
+Set against the backdrop of Cambridge Analytica and the digital privacy scandals rocking today's news, Stealing Ur Feelings is a fast, darkly funny, dizzying unveiling of the "fun secret feature" lurking behind all of our selfies...
 
-Where even your own face can be used as a weapon to bias social systems, influence elections, and alter our world in dangerously unpredictable ways.
+...one that has the power to bias social systems, influence elections, and alter our world in dangerously unpredictable ways.
 <br/><br/>
 
 #### :eyes: check these out first 
