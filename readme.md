@@ -2,9 +2,9 @@
 
 ### STEALING UR FEELINGS
 
-Meet the exciting new AI that knows you better than you know yourself.
+Meet the new AI that knows you better than you know yourself.
 
-*Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps are using facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy.
+*Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps are secretly using facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy.
 
 It's supported by a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
 
@@ -22,7 +22,7 @@ Suddenly, there was the perfect tool to extract even more data from us, all the 
 
 And, as revealed in recently approved patents, it's in the hands of the very corporations who seek to profit by doing the most harm.
 
-Now, for the first time ever, go inside the apps we show our faces to every day -- from Snapchat to Instagram to TikTok -- and see your own digital life through the eyes of artificial intelligence.  
+Now, for the first time ever, go inside the apps we show our faces to every day -- from Snapchat to Instagram to TikTok -- and see your own digital life through the eyes of AI.  
 
 Using a combination of AR, filmed content, and interactive game mechanics, we'll explain the science of facial feature tracking,  demystify the algorithms that determine if you're happy or sad, and reveal the tech corporations' patented plans to make billions by analyzing (and selling) your reactions at public events.
 
