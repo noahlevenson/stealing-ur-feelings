@@ -28,7 +28,7 @@ Using a combination of AR, filmed content, and interactive game mechanics, we'll
 
 Along the way, we'll use the very same technology to exploit your reaction to our own content in some pretty horrifying ways.
 
-Set against the backdrop of Cambridge Analytica and the digital privacy scandals rocking today's news, Stealing Ur Feelings is a fast, darkly funny, dizzying unveiling of the "fun secret feature" lurking behind all of our selfies...
+Set against the backdrop of Cambridge Analytica and the digital privacy scandals rocking today's news, *Stealing Ur Feelings* is a fast, darkly funny, dizzying unveiling of the "fun secret feature" lurking behind all of our selfies...
 
 ...one that has the power to bias social systems, influence elections, and alter our world in dangerously unpredictable ways.
 <br/><br/>
