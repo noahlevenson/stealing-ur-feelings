@@ -1,4 +1,4 @@
-![stealing ur feelings](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/suf_gif_01032018.gif)
+![stealing ur feelings](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/suf_gif_03052019.gif)
 
 ### STEALING UR FEELINGS
 
@@ -6,9 +6,11 @@ Meet the new AI that knows you better than you know yourself.
 
 *Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps are secretly using facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy.
 
-It's supported by a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
+It will premiere at the 2019 Tribeca Film Festival. Stay tuned for announcements about our internet premiere.
 
-The project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
+The project is supported by a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
+
+*Stealing Ur Feelings* began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
 <br/><br/>
 
 #### :pencil: the story
@@ -44,6 +46,8 @@ Set against the backdrop of Cambridge Analytica and the digital privacy scandals
 <br/><br/>
 
 #### :zap: changelog
+**03/06/2019** We've been selected to premiere at the 2019 Tribeca Film Festival! 
+
 **01/02/2019** Interactive tech demo v2.0 is live!
 
 **10/24/2018** We won 
