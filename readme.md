@@ -13,28 +13,6 @@ The project is supported by a $50,000 grant from the NetGain partnership -- a co
 *Stealing Ur Feelings* began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
 <br/><br/>
 
-#### :pencil: the story
-In the mid-2010s, tech corporations' worsening addiction to our personal data sent them scrambling to invent more powerful ways to violate our privacy.
-
-The result was a new kind of artificial intelligence that could harvest our data faster, more accurately, and more stealthily than ever before:
-
-Facial emotion recognition. Algorithms that can determine how you feel just by analyzing your face. 
-
-Suddenly, there was the perfect tool to extract even more data from us, all the time, everywhere -- even when we're not scrolling, typing, or clicking.
-
-And, as revealed in recently approved patents, it's in the hands of the very corporations who seek to profit by doing the most harm.
-
-Now, for the first time ever, go inside the apps we show our faces to every day -- from Snapchat to Instagram to TikTok -- and see your own digital life through the eyes of AI.  
-
-Using a combination of AR, filmed content, and interactive game mechanics, we'll explain the science of facial feature tracking,  demystify the algorithms that determine if you're happy or sad, and reveal the tech corporations' patented plans to make billions by analyzing (and selling) your reactions at public events.
-
-Along the way, we'll use the very same technology to exploit your reaction to our own content in some pretty horrifying ways.
-
-Set against the backdrop of Cambridge Analytica and the digital privacy scandals rocking today's news, *Stealing Ur Feelings* is a fast, darkly funny, dizzying unveiling of the "fun secret feature" lurking behind all of our selfies...
-
-...one that has the power to bias social systems, influence elections, and alter our world in dangerously unpredictable ways.
-<br/><br/>
-
 #### :eyes: check these out first 
 * [interactive tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) (requires a computer with a webcam) :arrow_left: :exclamation: :movie_camera:
 * [old interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) (requires a computer with a webcam) 
