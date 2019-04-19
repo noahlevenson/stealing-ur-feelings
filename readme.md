@@ -1,4 +1,4 @@
-![stealing ur feelings](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/suf_gif_03052019.gif)
+![stealing ur feelings](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/suf_gif_04192019.gif)
 
 ### STEALING UR FEELINGS
 
