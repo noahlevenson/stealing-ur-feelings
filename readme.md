@@ -13,7 +13,7 @@ The project is supported by a $50,000 grant from the NetGain partnership -- a co
 *Stealing Ur Feelings* began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
 <br/><br/>
 
-#### :newspaper: press
+#### :newspaper: press & recognition
 [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings)
 
 [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/)
