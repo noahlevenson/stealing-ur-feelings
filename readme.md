@@ -19,6 +19,11 @@ The project is supported by a $50,000 grant from the NetGain partnership -- a co
 [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/)
 <br/><br/>
 
+#### :movie_camera: festival history
+[2019 Tribeca Film Festival](https://www.tribecafilm.com/filmguide/stealing-ur-feelings-2019)
+[2019 Open City Documentary Festival](https://opencitylondon.com/events/expanded-realities-2019/)
+<br/><br/>
+
 #### :eyes: development
 * [interactive tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) (requires a computer with a webcam) :arrow_left: :exclamation: :movie_camera:
 * [old interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) (requires a computer with a webcam) 
@@ -30,6 +35,8 @@ The project is supported by a $50,000 grant from the NetGain partnership -- a co
 <br/><br/>
 
 #### :zap: changelog
+**08/10/2019** We're coming to Open City Documentary Festival in London
+
 **05/07/2019** Profiles by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings) and [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/)
 
 **03/06/2019** We've been selected to premiere at the 2019 Tribeca Film Festival! 
