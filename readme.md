@@ -4,7 +4,7 @@
 
 Meet the new AI that knows you better than you know yourself.
 
-*Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps can use facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy.
+*Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps can use facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy. Using the AI techniques described in corporate patents, *Stealing Ur Feelings* learns your deepest secrets just by analyzing your face.
 
 It premiered at the 2019 Tribeca Film Festival. **Stay tuned for announcements about our internet premiere.**
 
