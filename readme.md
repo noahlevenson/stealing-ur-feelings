@@ -41,6 +41,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**08/14/2019** MIT selected us for inclusion in DocuBase
+
 **08/10/2019** We're coming to Open City Documentary Festival in London
 
 **05/07/2019** Profiles by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings) and [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/)
