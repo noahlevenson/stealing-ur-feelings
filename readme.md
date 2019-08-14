@@ -6,17 +6,21 @@ Meet the new AI that knows you better than you know yourself.
 
 *Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps can use facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy. Using the AI techniques described in corporate patents, *Stealing Ur Feelings* learns your deepest secrets just by analyzing your face.
 
-It premiered at the 2019 Tribeca Film Festival. **Stay tuned for announcements about our internet premiere.**
+The project premiered at the 2019 Tribeca Film Festival. It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings) and [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/); [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
 
-The project is supported by a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
+**Stay tuned for announcements about future festival exhibitions and our internet premiere.**
 
-*Stealing Ur Feelings* began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
+*Stealing Ur Feelings* is supported by a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
+
+This project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
 <br/><br/>
 
 #### :newspaper: press & recognition
 [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings)
 
 [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/)
+
+[MIT DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/)
 <br/><br/>
 
 #### :movie_camera: festival history
