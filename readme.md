@@ -33,6 +33,7 @@ The project is supported by a $50,000 grant from the NetGain partnership -- a co
 * [full application](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/full-application.md)
 * [slides from the 10/24/2018 Pecha Kucha talk at London's Royal Society of Arts](https://docs.google.com/presentation/d/e/2PACX-1vSGp751HRvqRZc-oWQM_JA9mb0IfSe8w2bBLbMmNi3-fb2gRVuUeyUqYsko0Gatd53z2BETPx-63Ybk/pub?start=false&loop=false&delayms=20000)
 * film script (coming soon)
+* complete source code (coming soon)
 <br/><br/>
 
 #### :zap: changelog
