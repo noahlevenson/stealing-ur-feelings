@@ -27,6 +27,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 [2019 Tribeca Film Festival](https://www.tribecafilm.com/filmguide/stealing-ur-feelings-2019)
 
 [2019 Open City Documentary Festival](https://opencitylondon.com/events/expanded-realities-2019/)
+
+[2019 Camden International Film Festival](https://ciff19.eventive.org/films/stealing-ur-feelings-5d559831bc7b71011b2e7a96)
 <br/><br/>
 
 #### :eyes: development
@@ -41,6 +43,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**08/19/2019** We're coming to Camden International Film Festival in Maine
+
 **08/14/2019** MIT selected us for inclusion in DocuBase
 
 **08/10/2019** We're coming to Open City Documentary Festival in London
