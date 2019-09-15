@@ -10,7 +10,7 @@ The project premiered at the 2019 Tribeca Film Festival. It was profiled by the 
 
 **Stay tuned for announcements about future festival exhibitions and our internet premiere.**
 
-*Stealing Ur Feelings* is supported by a $50,000 grant from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
+*Stealing Ur Feelings* is supported by a $50,000 prize from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
 
 This project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
 <br/><br/>
@@ -23,12 +23,14 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 [MIT DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/)
 <br/><br/>
 
-#### :movie_camera: festival history
+#### :movie_camera: festival & exhibition history
 [2019 Tribeca Film Festival](https://www.tribecafilm.com/filmguide/stealing-ur-feelings-2019)
+
+[2019 Camden International Film Festival](https://ciff19.eventive.org/films/stealing-ur-feelings-5d559831bc7b71011b2e7a96)
 
 [2019 Open City Documentary Festival](https://opencitylondon.com/events/expanded-realities-2019/)
 
-[2019 Camden International Film Festival](https://ciff19.eventive.org/films/stealing-ur-feelings-5d559831bc7b71011b2e7a96)
+[Tate Exchange at the Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution)
 <br/><br/>
 
 #### :eyes: development
@@ -43,6 +45,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**09/14/2019** We're coming to Tate Exchange at the Tate Modern
+
 **08/19/2019** We're coming to Camden International Film Festival in Maine
 
 **08/14/2019** MIT selected us for inclusion in DocuBase
