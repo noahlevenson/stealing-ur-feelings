@@ -1,6 +1,6 @@
 ### What personal information does this site collect, transmit, or store?
 
-We do not transmit or store any personal information (including data about your face or anything in the background of your camera).
+We do not transmit or store any personal information (including data about your face or anything in the background captured by your camera).
 
 The information is processed locally in your browser and is never transmitted or stored externally.
 
@@ -10,7 +10,7 @@ We do not use Google Analytics.
 
 ### Contact
 
-If you have any questions about our privacy policy, please get in touch with: noahlevenson@gmail.com
+If you have any questions about our privacy policy, please contact: noahlevenson@gmail.com
 
 ### More
 
