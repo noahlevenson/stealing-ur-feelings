@@ -2,7 +2,7 @@
 
 ### STEALING UR FEELINGS
 
-[https://stealingurfeelin.gs](https://stealingurfeelin.gs)
+[https://stealingurfeelin.gs](https://stealingurfeelin.gs) :arrow_left: :arrow_left: :arrow_left: 
 
 Meet the new AI that knows you better than you know yourself.
 
@@ -36,8 +36,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :eyes: development
-* [interactive tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) (requires a computer with a webcam) :arrow_left: :exclamation: :movie_camera:
-* [old interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) (requires a computer with a webcam) 
+* [interactive tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/)
+* [old interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) 
 * [wireframe mockups](https://noahlevenson.github.io/stealing-ur-feelings/media/wireframes_07112018.pdf)
 * [initial funding concept](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/initial-funding-concept.md)
 * [full application](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/full-application.md)
