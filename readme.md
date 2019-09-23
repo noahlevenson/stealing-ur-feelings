@@ -2,13 +2,15 @@
 
 ### STEALING UR FEELINGS
 
+[https://stealingurfeelin.gs](https://stealingurfeelin.gs)
+
 Meet the new AI that knows you better than you know yourself.
 
-*Stealing Ur Feelings* is an augmented reality experience that reveals how your favorite apps can use facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy. Using the AI techniques described in corporate patents, *Stealing Ur Feelings* learns your deepest secrets just by analyzing your face.
+[*Stealing Ur Feelings*](https://stealingurfeelin.gs) is an augmented reality experience that reveals how your favorite apps can use facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy. Using the AI techniques described in corporate patents, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) learns your deepest secrets just by analyzing your face.
 
-The project premiered at the 2019 Tribeca Film Festival. It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings) and [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/); [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
+The project [premiered on the internet](https://twitter.com/mozilla/status/1176126457732632576) on September 23, 2019.
 
-**Stay tuned for announcements about future festival exhibitions and our internet premiere.**
+It world premiered at the 2019 Tribeca Film Festival and was exhibited at the [Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution). It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings) and [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/); [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
 
 *Stealing Ur Feelings* is supported by a $50,000 prize from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
 
@@ -45,6 +47,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**09/23/2019** Internet premiere
+
 **09/14/2019** We're coming to Tate Exchange at the Tate Modern
 
 **08/19/2019** We're coming to Camden International Film Festival in Maine
