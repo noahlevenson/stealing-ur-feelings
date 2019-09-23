@@ -12,7 +12,7 @@ The project [premiered on the internet](https://twitter.com/mozilla/status/11761
 
 It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.com/filmguide/stealing-ur-feelings-2019) and was exhibited at the [Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution). It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings) and [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/); [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
 
-*Stealing Ur Feelings* is supported by a $50,000 prize from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
+[*Stealing Ur Feelings*](https://stealingurfeelin.gs) is supported by a $50,000 prize from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
 
 This project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
 <br/><br/>
