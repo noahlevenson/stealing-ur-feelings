@@ -23,6 +23,12 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/)
 
 [MIT DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/)
+
+[Adweek](https://www.adweek.com/digital/mozilla-wants-to-know-if-snapchat-and-other-platforms-are-stealing-ur-feelings/)
+
+[Business Insider Italy](https://it.businessinsider.com/occhio-a-quella-telecamera-lo-smartphone-ti-spia-lai-dellapp-studia-le-tue-espressioni-e-capisce-i-tuoi-gusti-e-monetizza/)
+
+[Boing Boing](https://boingboing.net/2019/09/29/big-five-junk-sci.html)
 <br/><br/>
 
 #### :movie_camera: festival & exhibition history
