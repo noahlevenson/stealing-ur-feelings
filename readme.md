@@ -8,7 +8,7 @@ Meet the new AI that knows you better than you know yourself.
 
 [*Stealing Ur Feelings*](https://stealingurfeelin.gs) is an augmented reality experience that reveals how your favorite apps can use facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy. Using the AI techniques described in corporate patents, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) learns your deepest secrets just by analyzing your face.
 
-The project [premiered on the internet](https://twitter.com/mozilla/status/1176126457732632576) on September 23, 2019.
+The project [premiered on the internet](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/) on September 23, 2019.
 
 It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.com/filmguide/stealing-ur-feelings-2019) and was exhibited at the [Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution). It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings) and [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/); [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
 
@@ -29,6 +29,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 [Business Insider Italy](https://it.businessinsider.com/occhio-a-quella-telecamera-lo-smartphone-ti-spia-lai-dellapp-studia-le-tue-espressioni-e-capisce-i-tuoi-gusti-e-monetizza/)
 
 [Boing Boing](https://boingboing.net/2019/09/29/big-five-junk-sci.html)
+
+[Mozilla](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/)
 <br/><br/>
 
 #### :movie_camera: festival & exhibition history
@@ -36,9 +38,13 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [2019 Camden International Film Festival](https://ciff19.eventive.org/films/stealing-ur-feelings-5d559831bc7b71011b2e7a96)
 
+[2019 Montreal International Documentary Festival](https://ridm.ca/en/ridms-uxdoc-space-from-the-real-to-the-virtual)
+
 [2019 Open City Documentary Festival](https://opencitylondon.com/events/expanded-realities-2019/)
 
 [Tate Exchange at the Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution)
+
+[The Glass Room SF presented by Tactical Tech](https://theglassroom.org/san-francisco/exhibits)
 <br/><br/>
 
 #### :eyes: development
@@ -53,6 +59,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**10/21/2019** We're coming to Montreal International Documentary Festival and The Glass Room SF
+
 **09/23/2019** Internet premiere
 
 **09/14/2019** We're coming to Tate Exchange at the Tate Modern
