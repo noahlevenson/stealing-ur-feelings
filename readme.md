@@ -28,6 +28,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [Adweek](https://www.adweek.com/digital/mozilla-wants-to-know-if-snapchat-and-other-platforms-are-stealing-ur-feelings/)
 
+[It's Nice That](https://www.itsnicethat.com/articles/noah-levenson-stealing-ur-feelings-digital-011119)
+
 [Business Insider Italy](https://it.businessinsider.com/occhio-a-quella-telecamera-lo-smartphone-ti-spia-lai-dellapp-studia-le-tue-espressioni-e-capisce-i-tuoi-gusti-e-monetizza/)
 
 [Boing Boing](https://boingboing.net/2019/09/29/big-five-junk-sci.html)
@@ -61,6 +63,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**11/03/2019** Feature in [It's Nice That](https://www.itsnicethat.com/articles/noah-levenson-stealing-ur-feelings-digital-011119)
+
 **10/21/2019** We're coming to Montreal International Documentary Festival and The Glass Room SF
 
 **09/23/2019** Internet premiere
