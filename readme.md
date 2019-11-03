@@ -22,6 +22,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [Scientific American](https://www.scientificamerican.com/article/this-video-watches-you-back/)
 
+[Hacker News](https://news.ycombinator.com/item?id=21337863)
+
 [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/)
 
 [MIT DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/)
