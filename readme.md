@@ -44,7 +44,7 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [2019 Camden International Film Festival](https://ciff19.eventive.org/films/stealing-ur-feelings-5d559831bc7b71011b2e7a96)
 
-[2019 Montreal International Documentary Festival](https://ridm.ca/en/ridms-uxdoc-space-from-the-real-to-the-virtual)
+[2019 Montreal International Documentary Festival](https://ridm.ca/en/films/stealing-ur-feelings)
 
 [2019 Open City Documentary Festival](https://opencitylondon.com/events/expanded-realities-2019/)
 
