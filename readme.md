@@ -32,7 +32,7 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [It's Nice That](https://www.itsnicethat.com/articles/noah-levenson-stealing-ur-feelings-digital-011119)
 
-[<em>Report</em> on RAI3](http://www.rai.it/programmi/report/inchieste/App-arenze-e1d7bdf1-b939-488a-a3e1-d3228e9b5729.html)
+[<em>Report</em> on Rai3](http://www.rai.it/programmi/report/inchieste/App-arenze-e1d7bdf1-b939-488a-a3e1-d3228e9b5729.html)
 
 [Business Insider Italy](https://it.businessinsider.com/occhio-a-quella-telecamera-lo-smartphone-ti-spia-lai-dellapp-studia-le-tue-espressioni-e-capisce-i-tuoi-gusti-e-monetizza/)
 
@@ -67,6 +67,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**11/12/2019** Featured on [<em>Report</em>](http://www.rai.it/programmi/report/inchieste/App-arenze-e1d7bdf1-b939-488a-a3e1-d3228e9b5729.html) on Italy's national public broadcaster Rai3
+
 **11/03/2019** Feature in [It's Nice That](https://www.itsnicethat.com/articles/noah-levenson-stealing-ur-feelings-digital-011119)
 
 **10/21/2019** We're coming to Montreal International Documentary Festival and The Glass Room SF
