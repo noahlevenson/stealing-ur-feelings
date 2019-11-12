@@ -32,6 +32,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [It's Nice That](https://www.itsnicethat.com/articles/noah-levenson-stealing-ur-feelings-digital-011119)
 
+[<em>Report</em> on RAI3](http://www.rai.it/programmi/report/inchieste/App-arenze-e1d7bdf1-b939-488a-a3e1-d3228e9b5729.html)
+
 [Business Insider Italy](https://it.businessinsider.com/occhio-a-quella-telecamera-lo-smartphone-ti-spia-lai-dellapp-studia-le-tue-espressioni-e-capisce-i-tuoi-gusti-e-monetizza/)
 
 [Boing Boing](https://boingboing.net/2019/09/29/big-five-junk-sci.html)
