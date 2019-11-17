@@ -36,6 +36,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [Business Insider Italy](https://it.businessinsider.com/occhio-a-quella-telecamera-lo-smartphone-ti-spia-lai-dellapp-studia-le-tue-espressioni-e-capisce-i-tuoi-gusti-e-monetizza/)
 
+[El Nacional](https://www.elnacional.com/papel-literario/narrativas-interactivas-y-transmedia-6/)
+
 [Boing Boing](https://boingboing.net/2019/09/29/big-five-junk-sci.html)
 
 [Mozilla](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/)
