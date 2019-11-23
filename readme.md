@@ -28,6 +28,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954)
 
+[<em>Let's Go with Sabrina Marandola</em> on CBC Radio One](https://www.cbc.ca/listen/live-radio/1-383-lets-go/clip/15748048-stealing-ur-feelings)
+
 [MIT DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/)
 
 [Adweek](https://www.adweek.com/digital/mozilla-wants-to-know-if-snapchat-and-other-platforms-are-stealing-ur-feelings/)
@@ -71,6 +73,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**11/22/2019** Featured on [<em>Let's Go with Sabrina Marandola</em> on CBC Radio One](https://www.cbc.ca/listen/live-radio/1-383-lets-go/clip/15748048-stealing-ur-feelings)
+
 **11/18/2019** Profiled by [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954)
 
 **11/12/2019** Featured on [<em>Report</em>](http://www.rai.it/programmi/report/inchieste/App-arenze-e1d7bdf1-b939-488a-a3e1-d3228e9b5729.html) on Italy's national public broadcaster Rai3
