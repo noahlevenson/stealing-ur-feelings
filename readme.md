@@ -28,7 +28,7 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954)
 
-[<em>Let's Go with Sabrina Marandola</em> on CBC Radio One](https://www.cbc.ca/listen/live-radio/1-383-lets-go/clip/15748048-stealing-ur-feelings)
+[<em>Let's Go with Sabrina Marandola</em> on CBC Radio One](https://www.cbc.ca/listen/live-radio/1-383-lets-go/clip/15748048-stealing-ur-feelings) / [.mp3](https://noahlevenson.com/audio/stealing-ur-feelings-cbc-radio-one.mp3)
 
 [MIT DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/)
 
