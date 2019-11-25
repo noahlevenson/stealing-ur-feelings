@@ -42,6 +42,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [El Nacional](https://www.elnacional.com/papel-literario/narrativas-interactivas-y-transmedia-6/)
 
+[ProPakistani](https://propakistani.pk/2019/09/27/this-disturbing-ar-film-shows-how-your-face-can-be-exploited-by-tech-companies/)
+
 [Boing Boing](https://boingboing.net/2019/09/29/big-five-junk-sci.html)
 
 [Mozilla](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/)
