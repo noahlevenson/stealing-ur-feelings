@@ -36,6 +36,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 
 [It's Nice That](https://www.itsnicethat.com/articles/noah-levenson-stealing-ur-feelings-digital-011119)
 
+[El Pais](https://elpais.com/cultura/2020/01/06/doc_and_roll/1578333371_831308.html)
+
 [<em>Report</em> on Rai3](http://www.rai.it/programmi/report/inchieste/App-arenze-e1d7bdf1-b939-488a-a3e1-d3228e9b5729.html)
 
 [Business Insider Italy](https://it.businessinsider.com/occhio-a-quella-telecamera-lo-smartphone-ti-spia-lai-dellapp-studia-le-tue-espressioni-e-capisce-i-tuoi-gusti-e-monetizza/)
@@ -75,6 +77,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**01/15/2020** Feature in [El Pais](https://elpais.com/cultura/2020/01/06/doc_and_roll/1578333371_831308.html)
+
 **11/22/2019** Featured on [<em>Let's Go with Sabrina Marandola</em>](https://www.cbc.ca/listen/live-radio/1-383-lets-go/clip/15748048-stealing-ur-feelings) on CBC Radio One
 
 **11/18/2019** Profiled by [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954)
