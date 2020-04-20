@@ -10,7 +10,7 @@ Meet the new AI that knows you better than you know yourself.
 
 The project [premiered on the internet](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/) on September 23, 2019.
 
-It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.com/filmguide/stealing-ur-feelings-2019) and was exhibited at the [Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution). It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings), [Scientific American](https://www.scientificamerican.com/article/this-video-watches-you-back/), [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/), [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954), and many more; [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
+It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.com/festival/archive/stealing-ur-feelings-2019) and was exhibited at the [Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution). It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings), [Scientific American](https://www.scientificamerican.com/article/this-video-watches-you-back/), [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/), [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954), and many more; [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
 
 [*Stealing Ur Feelings*](https://stealingurfeelin.gs) is supported by a $50,000 prize from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
 
@@ -54,7 +54,7 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :movie_camera: festival & exhibition history
-[2019 Tribeca Film Festival](https://www.tribecafilm.com/filmguide/stealing-ur-feelings-2019)
+[2019 Tribeca Film Festival](https://www.tribecafilm.com/festival/archive/stealing-ur-feelings-2019)
 
 [2019 Camden International Film Festival](https://ciff19.eventive.org/films/stealing-ur-feelings-5d559831bc7b71011b2e7a96)
 
