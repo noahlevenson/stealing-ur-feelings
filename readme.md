@@ -8,7 +8,9 @@ Meet the new AI that knows you better than you know yourself.
 
 [*Stealing Ur Feelings*](https://stealingurfeelin.gs) is an augmented reality experience that reveals how your favorite apps can use facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy. Using the AI techniques described in corporate patents, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) learns your deepest secrets just by analyzing your face.
 
-The project [premiered on the internet](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/) on September 23, 2019.
+It [won the 2020 Webby Award](https://winners.webbyawards.com/#/2020/video/immersive-and-mixed-reality/documentary/126432/stealing-ur-feelings) for Best Immersive Documentary.
+
+The project [premiered on the internet](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/) on September 23, 2019. 
 
 It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.com/festival/archive/stealing-ur-feelings-2019) and was exhibited at the [Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution). It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings), [Scientific American](https://www.scientificamerican.com/article/this-video-watches-you-back/), [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/), [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954), and many more; [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
 
@@ -79,6 +81,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**05/19/2020** We [won the 2020 Webby Award](https://winners.webbyawards.com/#/2020/video/immersive-and-mixed-reality/documentary/126432/stealing-ur-feelings) for Best Immersive Documentary
+
 **01/31/2020** Named one of the Top 50 XR Experiences of 2019 by [Forbes](https://www.forbes.com/sites/jessedamiani/2020/01/30/the-top-50-xr-experiences-of-2019/)
 
 **01/15/2020** Feature in [El Pais](https://elpais.com/cultura/2020/01/06/doc_and_roll/1578333371_831308.html)
