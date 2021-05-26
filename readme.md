@@ -81,6 +81,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**05/26/2021** We're featured in [Slanted Magazine #37, the AI issue](https://www.slanted.de/product/slanted-magazine-37-ai/)
+
 **05/19/2020** We [won the 2020 Webby Award](https://winners.webbyawards.com/#/2020/video/immersive-and-mixed-reality/documentary/126432/stealing-ur-feelings) for Best Immersive Documentary
 
 **01/31/2020** Named one of the Top 50 XR Experiences of 2019 by [Forbes](https://www.forbes.com/sites/jessedamiani/2020/01/30/the-top-50-xr-experiences-of-2019/)
