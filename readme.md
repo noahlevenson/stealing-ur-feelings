@@ -16,7 +16,9 @@ It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.c
 
 [*Stealing Ur Feelings*](https://stealingurfeelin.gs) is supported by a $50,000 prize from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
 
-This project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
+The project was somewhat notoriously plagiarized by the Financial Times; this event was chronicled in an [article for The American Prospect](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/).
+
+[*Stealing Ur Feelings*](https://stealingurfeelin.gs) began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
 <br/><br/>
 
 #### :newspaper: press & recognition
@@ -81,6 +83,8 @@ This project began life as an application for Mozilla's 2018 [awards for art and
 <br/><br/>
 
 #### :zap: changelog
+**06/01/2021** [The American Prospect article](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/) is published, detailing plagiarism by The Financial Times
+
 **05/26/2021** We're featured in [Slanted Magazine #37, the AI issue](https://www.slanted.de/product/slanted-magazine-37-ai/)
 
 **05/19/2020** We [won the 2020 Webby Award](https://winners.webbyawards.com/#/2020/video/immersive-and-mixed-reality/documentary/126432/stealing-ur-feelings) for Best Immersive Documentary
