@@ -4,7 +4,7 @@
 
 # :compass: Table of contents
 * [What is *Stealing Ur Feelings?*](#question-what-is-stealing-ur-feelings)
-* [Tech highlights and dev notes](#floppy_disk-tech-highlights-and-dev-notes)
+* [Dev notes](#floppy_disk-tech-highlights-and-dev-notes)
 * [Press and recognition](#newspaper-press-and-recognition)
 * [Festival and exhibiton history](#movie_camera-festival-and-exhibition-history)
 * [Development](#eyes-development)
@@ -28,8 +28,8 @@ It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.c
 The project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/).
 <br/><br/>
 
-### :floppy_disk: Tech highlights and dev notes
-[*Stealing Ur Feelings*](https://stealingurfeelin.gs) was built in a hurry. I didn't really have time to design thoughtful abstractions. [Tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) was slapped together for the Tribeca Film Festival submission. The [final codebase](https://noahlevenson.github.io/stealing-ur-feelings/final/) is essentially the result of layering many hasty ideas on top of that demo.
+### :floppy_disk: Dev notes
+[*Stealing Ur Feelings*](https://stealingurfeelin.gs) was built in a hurry. I didn't really have time to design thoughtful abstractions. [Tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) was slapped together for the Tribeca Film Festival submission. The [final codebase](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final) is essentially the result of layering many hasty ideas on top of that demo.
 
 I built a few different computer vision engines to support the idea, including a big complicated custom thing that we didn't wind up using. Along the way, I got [Dlib's multithreaded facial landmark detector working in the browser](https://github.com/noahlevenson/dlib-in-the-browser) via WebAssembly, porting native pthreads to WebWorkers. I enjoyed that.
 
@@ -37,7 +37,7 @@ To achieve all the seamless quick cuts between video and interactive set pieces,
 
 On Chrome, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) deploys a little zero-copy hack using [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) to run the computer vision engine on a separate thread. At development time, Firefox's implementation of OffscreenCanvas was incomplete. The result is that [*Stealing Ur Feelings*](https://stealingurfeelin.gs) runs much smoother on Chrome. (Another result is that there have been OffscreenCanvas regressions in Chrome stable releases which have caused [*Stealing Ur Feelings*](https://stealingurfeelin.gs) to segfault the browser.) Since [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was funded by Mozilla, I actually met with the Firefox graphics team, using [*Stealing Ur Feelings*](https://stealingurfeelin.gs) as a case study for how their OffscreenCanvas implementation could be improved. I don't think they liked that.
 
-At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was installed under a big television hanging from the ceiling which broadcast the AI-extracted "secrets" of whoever was experiencing the project at that moment. The client and server to support this functionality is located in the [/installation](https://noahlevenson.github.io/stealing-ur-feelings/final/installation/) directory. For the New York City festival premiere, I tuned the political bias algorithm to classify absolutely everyone as a far-right conservative Republican. It was fun to watch people freak out when that got broadcast on the big TV.
+At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was installed under a big television hanging from the ceiling which broadcast the AI-extracted "secrets" of whoever was experiencing the project at that moment. The client and server to support this functionality is located in the [/installation](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final/installation) directory. For the New York City festival premiere, I tuned the political bias algorithm to classify absolutely everyone as a far-right conservative Republican. It was fun to watch viewers freak out when that got broadcast on the big TV.
 <br/><br/>
 
 ### :newspaper: Press and recognition
@@ -91,7 +91,7 @@ At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealing
 <br/><br/>
 
 ### :eyes: Development
-* [source code](https://noahlevenson.github.io/stealing-ur-feelings/final/)
+* [source code](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final)
 * [interactive tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/)
 * [old interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) 
 * [wireframe mockups](https://noahlevenson.github.io/stealing-ur-feelings/media/wireframes_07112018.pdf)
