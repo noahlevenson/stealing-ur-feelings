@@ -1,13 +1,13 @@
-# Stealing Ur Feelings
+# stealing ur feelings
 
 ![Stealing Ur Feelings](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/suf_gif_04192019.gif)
 
 # :compass: Table of contents
 * [What is *Stealing Ur Feelings?*](#question-what-is-stealing-ur-feelings)
-* [Dev notes](#floppy_disk-tech-highlights-and-dev-notes)
+* [Noah's dev notes](#eyes-noahs-dev-notes)
 * [Press and recognition](#newspaper-press-and-recognition)
 * [Festival and exhibiton history](#movie_camera-festival-and-exhibition-history)
-* [Development](#eyes-development)
+* [Source](#floppy_disk-source)
 * [Changelog](#zap-changelog)
 
 ### :question: What is *Stealing Ur Feelings?*
@@ -23,22 +23,20 @@ The project [premiered on the internet](https://blog.mozilla.org/blog/2019/09/23
 
 It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.com/festival/archive/stealing-ur-feelings-2019) and was exhibited at the [Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution). It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings), [*Scientific American*](https://www.scientificamerican.com/article/this-video-watches-you-back/), [*Engadget*](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/), [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954), and many more; it made the front page of [Hacker News](https://news.ycombinator.com/item?id=21337863); [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
 
-[*Stealing Ur Feelings*](https://stealingurfeelin.gs) was somewhat notoriously plagiarized by the *Financial Times;* this event was chronicled in an [article for The American Prospect](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/).
+[*Stealing Ur Feelings*](https://stealingurfeelin.gs) was somewhat notoriously plagiarized by the *Financial Times;* this event was chronicled in an [article for *The American Prospect*](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/).
 
 The project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/).
 
-### :floppy_disk: Dev notes
-[*Stealing Ur Feelings*](https://stealingurfeelin.gs) was built in a hurry. I didn't really have time to design thoughtful abstractions. [Tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) was slapped together for the Tribeca Film Festival submission. The [final codebase](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final) is essentially the result of layering many hasty ideas on top of that demo.
+### :eyes: Noah's dev notes
+[*Stealing Ur Feelings*](https://stealingurfeelin.gs) was built in a hurry, and it shows. [Tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) was slapped together for the Tribeca Film Festival submission. The [final codebase](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final) is essentially the result of layering many hasty ideas on top of that demo.
 
-I built a few different computer vision engines to support the idea, including a big complicated custom thing that we didn't wind up using. Along the way, I got [Dlib's multithreaded facial landmark detector working in the browser](https://github.com/noahlevenson/dlib-in-the-browser) via WebAssembly, porting native pthreads to WebWorkers. I enjoyed that.
+I built a few different computer vision engines to support the idea, including a big complicated custom thing that we didn't end up using. Another thing we didn't use: I managed to compile Dlib for the browser via WebAssembly, and I got its [multithreaded facial landmark detector working with HTML5 canvas](https://github.com/noahlevenson/dlib-in-the-browser) by mapping native pthreads to WebWorkers.
 
-To achieve all the seamless quick cuts between video and interactive set pieces, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) uses a custom system for frame-accurate video synchronization that I originally developed for [*Weird Box*](https://weirdbox.tv).
+To achieve the seamless quick cuts between video and interactive set pieces, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) uses a custom system for frame-accurate video synchronization that I originally developed for [*Weird Box*](https://weirdbox.tv); it's based on embedding encoded information in the overscan area of the video, a la [datacasting](https://en.wikipedia.org/wiki/Datacasting).
 
-On Chrome, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) deploys a zero-copy hack using [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) to run the computer vision engine on a separate thread. At development time, Firefox's implementation of OffscreenCanvas was incomplete. The result is that [*Stealing Ur Feelings*](https://stealingurfeelin.gs) runs much smoother on Chrome. (Another result is that there have been OffscreenCanvas regressions in Chrome stable releases which have caused [*Stealing Ur Feelings*](https://stealingurfeelin.gs) to segfault the browser.) 
+On Chrome, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) deploys a zero-copy hack using [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) to run the computer vision engine on a separate thread. At development time, Firefox's implementation of OffscreenCanvas was incomplete. The result is that [*Stealing Ur Feelings*](https://stealingurfeelin.gs) runs much smoother on Chrome. (Another result is that there have been OffscreenCanvas regressions in Chrome stable releases which have caused [*Stealing Ur Feelings*](https://stealingurfeelin.gs) to segfault the browser.)
 
-Since [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was funded by Mozilla, I met with the Firefox graphics team, using [*Stealing Ur Feelings*](https://stealingurfeelin.gs) as a case study to illustrate how their OffscreenCanvas implementation could be improved. I don't think they liked that.
-
-At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was installed under a big television hanging from the ceiling which broadcast the AI-extracted "secrets" of whoever was experiencing the project at that moment. The client and server to support this functionality is located in the [/installation](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final/installation) directory. For the premiere, I tuned the political bias algorithm to classify absolutely everyone as a far-right conservative Republican. It was fun to watch viewers freak out when that got broadcast on the jumbotron.
+At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was installed under a big television hanging from the ceiling which broadcast the AI-extracted "secrets" of whoever was experiencing the project at that moment. The client and server to support this functionality are located in the [/installation](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final/installation) directory. For the premiere, I tuned the political bias algorithm to classify absolutely everyone as a far-right conservative Republican. It was fun to watch viewers freak out when their secret political affiliation was broadcast on the jumbotron.
 
 ### :newspaper: Press and recognition
 [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings)
@@ -88,7 +86,7 @@ At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealing
 
 [The Glass Room SF presented by Tactical Tech](https://theglassroom.org/san-francisco/exhibits)
 
-### :eyes: Development
+### :floppy_disk: Source
 * [source code](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final)
 * [interactive tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/)
 * [old interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) 
