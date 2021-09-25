@@ -26,7 +26,6 @@ It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.c
 [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was somewhat notoriously plagiarized by the *Financial Times;* this event was chronicled in an [article for The American Prospect](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/).
 
 The project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/).
-<br/><br/>
 
 ### :floppy_disk: Dev notes
 [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was built in a hurry. I didn't really have time to design thoughtful abstractions. [Tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) was slapped together for the Tribeca Film Festival submission. The [final codebase](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final) is essentially the result of layering many hasty ideas on top of that demo.
@@ -38,7 +37,6 @@ To achieve all the seamless quick cuts between video and interactive set pieces,
 On Chrome, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) deploys a little zero-copy hack using [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) to run the computer vision engine on a separate thread. At development time, Firefox's implementation of OffscreenCanvas was incomplete. The result is that [*Stealing Ur Feelings*](https://stealingurfeelin.gs) runs much smoother on Chrome. (Another result is that there have been OffscreenCanvas regressions in Chrome stable releases which have caused [*Stealing Ur Feelings*](https://stealingurfeelin.gs) to segfault the browser.) Since [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was funded by Mozilla, I actually met with the Firefox graphics team, using [*Stealing Ur Feelings*](https://stealingurfeelin.gs) as a case study for how their OffscreenCanvas implementation could be improved. I don't think they liked that.
 
 At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was installed under a big television hanging from the ceiling which broadcast the AI-extracted "secrets" of whoever was experiencing the project at that moment. The client and server to support this functionality is located in the [/installation](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final/installation) directory. For the New York City festival premiere, I tuned the political bias algorithm to classify absolutely everyone as a far-right conservative Republican. It was fun to watch viewers freak out when that got broadcast on the big TV.
-<br/><br/>
 
 ### :newspaper: Press and recognition
 [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings)
@@ -74,7 +72,6 @@ At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealing
 [Boing Boing](https://boingboing.net/2019/09/29/big-five-junk-sci.html)
 
 [Mozilla](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/)
-<br/><br/>
 
 ### :movie_camera: Festival and exhibition history
 [2019 Tribeca Film Festival](https://www.tribecafilm.com/festival/archive/stealing-ur-feelings-2019)
@@ -88,7 +85,6 @@ At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealing
 [Tate Exchange at the Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution)
 
 [The Glass Room SF presented by Tactical Tech](https://theglassroom.org/san-francisco/exhibits)
-<br/><br/>
 
 ### :eyes: Development
 * [source code](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final)
@@ -98,7 +94,6 @@ At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealing
 * [initial funding concept](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/initial-funding-concept.md)
 * [full application](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/full-application.md)
 * [slides from the 10/24/2018 Pecha Kucha talk at London's Royal Society of Arts](https://docs.google.com/presentation/d/e/2PACX-1vSGp751HRvqRZc-oWQM_JA9mb0IfSe8w2bBLbMmNi3-fb2gRVuUeyUqYsko0Gatd53z2BETPx-63Ybk/pub?start=false&loop=false&delayms=20000)
-<br/><br/>
 
 ### :zap: Changelog
 **06/01/2021** [The American Prospect article](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/) is published, detailing plagiarism by The Financial Times
