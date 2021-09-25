@@ -1,0 +1,123 @@
+body, html {
+	margin: 0;
+	height: 100%;
+	background-color: #000;
+	font-family: 'Arimo', sans-serif;
+}
+
+body {
+	
+}
+
+#twitter-share-button {
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+#facebook-share-button {
+	
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+#super-container {
+	height: 100%;
+	width: 100%;
+	background-color: #000000;
+	z-index: 10;
+}
+
+#content-area {
+	background-color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#the-film {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#footer {
+	background-color: #ffff1a;
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: none;
+	z-index: 10;
+}
+
+.header-img {
+	width: auto;
+	max-height: 30px;
+}
+
+.inline {
+	display: inline;
+}
+
+.right-menu {
+	display: inline;
+	visibility: hidden;
+}
+
+@media only screen and (min-width: 550px) {
+	.right-menu {
+		display: inline;
+		visibility: visible;
+	}
+}
+
+.yellow {
+	color: #ffff1a;
+}
+
+#rotate-device {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #000000;
+	text-align: center;
+	display: none;
+	z-index: 100;
+	vertical-align: middle;
+}
+
+.rotate-text {
+	position: relative;
+	top: 30%;
+	font-weight: bold;
+	font-size: 80px;
+	background-color: #ffff1a;
+	padding: 10px;
+	line-height: 160px;
+}
+
+#baseball-card {
+	display: none;
+}
+
+#baseball-card-download {
+	display: none;
+}

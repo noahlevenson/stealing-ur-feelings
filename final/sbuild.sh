@@ -1,0 +1,11 @@
+uglifyjs src/events.js --compress --mangle --output public/js/events.min.js
+uglifyjs src/unsupported-browser.js --compress --mangle --output public/js/unsupported-browser.min.js
+uglifyjs src/boot.js --compress --mangle --output public/js/boot.min.js
+uglifyjs src/load.js --compress --mangle --output public/js/load.min.js
+uglifyjs src/boot-cv.js --compress --mangle --output public/js/boot-cv.min.js
+uglifyjs src/validate.js --compress --mangle --output public/js/validate.min.js
+uglifyjs src/data-init.js --compress --mangle --output public/js/data-init.min.js
+uglifyjs src/play.js --compress --mangle --output public/js/play.min.js
+uglifyjs src/stealing-ur-feelings.js --compress --mangle --output public/js/stealing-ur-feelings.min.js
+uglifyjs src/cv-worker.js --compress --mangle --output public/js/cv-worker.min.js
+uglifyjs src/petition.js --compress --mangle --output public/js/petition.min.js

@@ -1,27 +1,46 @@
-![stealing ur feelings](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/suf_gif_04192019.gif)
+# Stealing Ur Feelings
 
-### STEALING UR FEELINGS
+![Stealing Ur Feelings](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/suf_gif_04192019.gif)
 
+# :compass: Table of contents
+* [What is *Stealing Ur Feelings?*](#question-what-is-stealing-ur-feelings)
+* [Tech highlights and dev notes](#floppy_disk-tech-highlights-and-dev-notes)
+* [Press and recognition](#newspaper-press-and-recognition)
+* [Festival and exhibiton history](#movie_camera-festival-and-exhibition-history)
+* [Development](#eyes-development)
+* [Changelog](#zap-changelog)
+
+### :question: What is *Stealing Ur Feelings?*
 [https://stealingurfeelin.gs](https://stealingurfeelin.gs) :arrow_left: :arrow_left: :arrow_left: 
 
 Meet the new AI that knows you better than you know yourself.
 
-[*Stealing Ur Feelings*](https://stealingurfeelin.gs) is an augmented reality experience that reveals how your favorite apps can use facial emotion recognition technology to make decisions about your life, promote inequalities, and even destabilize American democracy. Using the AI techniques described in corporate patents, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) learns your deepest secrets just by analyzing your face.
+[*Stealing Ur Feelings*](https://stealingurfeelin.gs) is a deep learning-powered AR experience which analyzes your facial reactions to reveal the dangers of Big Tech's emotional surveillance programs. Using the AI techniques described in corporate patents, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) learns your deepest secrets just by analyzing your face.
 
 It [won the 2020 Webby Award](https://winners.webbyawards.com/#/2020/video/immersive-and-mixed-reality/documentary/126432/stealing-ur-feelings) for Best Immersive Documentary.
 
 The project [premiered on the internet](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/) on September 23, 2019. 
 
-It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.com/festival/archive/stealing-ur-feelings-2019) and was exhibited at the [Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution). It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings), [Scientific American](https://www.scientificamerican.com/article/this-video-watches-you-back/), [Engadget](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/), [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954), and many more; [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
+It world premiered at the [2019 Tribeca Film Festival](https://www.tribecafilm.com/festival/archive/stealing-ur-feelings-2019) and was exhibited at the [Tate Modern](https://www.tate.org.uk/whats-on/tate-modern/tate-exchange/workshop/higher-resolution). It was profiled by the [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings), [*Scientific American*](https://www.scientificamerican.com/article/this-video-watches-you-back/), [*Engadget*](https://www.engadget.com/2019/05/02/stealing-ur-feelings-ar-film-facial-recognition-tribeca-2019-kanye-pizza/), [CBC News](https://www.cbc.ca/news/canada/montreal/stealing-ur-feelings-1.5362954), and many more; it made the front page of [Hacker News](https://news.ycombinator.com/item?id=21337863); [MIT selected it for inclusion in DocuBase](https://docubase.mit.edu/project/stealing-ur-feelings/), a curated database of people and projects transforming documentary in the digital age.
 
-[*Stealing Ur Feelings*](https://stealingurfeelin.gs) is supported by a $50,000 prize from the NetGain partnership -- a collaboration between Mozilla, MacArthur Foundation, Ford Foundation, Knight Foundation, and the Open Society Foundations. 
+[*Stealing Ur Feelings*](https://stealingurfeelin.gs) was somewhat notoriously plagiarized by the *Financial Times;* this event was chronicled in an [article for The American Prospect](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/).
 
-The project was somewhat notoriously plagiarized by the Financial Times; this event was chronicled in an [article for The American Prospect](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/).
-
-[*Stealing Ur Feelings*](https://stealingurfeelin.gs) began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/). **This repository is an open workspace.** Check back often for updates!
+The project began life as an application for Mozilla's 2018 [awards for art and advocacy exploring artificial intelligence](https://blog.mozilla.org/blog/2018/06/04/mozilla-announces-225000-for-art-and-advocacy-exploring-artificial-intelligence/).
 <br/><br/>
 
-#### :newspaper: press & recognition
+### :floppy_disk: Tech highlights and dev notes
+[*Stealing Ur Feelings*](https://stealingurfeelin.gs) was built in a hurry. I didn't really have time to design thoughtful abstractions. [Tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) was slapped together for the Tribeca Film Festival submission. The [final codebase](https://noahlevenson.github.io/stealing-ur-feelings/final/) is essentially the result of layering many hasty ideas on top of that demo.
+
+I built a few different computer vision engines to support the idea, including a big complicated custom thing that we didn't wind up using. Along the way, I got [Dlib's multithreaded facial landmark detector working in the browser](https://github.com/noahlevenson/dlib-in-the-browser) via WebAssembly, porting native pthreads to WebWorkers. I enjoyed that.
+
+To achieve all the seamless quick cuts between video and interactive set pieces, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) uses a custom system for frame-accurate video synchronization that I originally developed for [*Weird Box*](https://weirdbox.tv).
+
+On Chrome, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) deploys a little zero-copy hack using [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) to run the computer vision engine on a separate thread. At development time, Firefox's implementation of OffscreenCanvas was incomplete. The result is that [*Stealing Ur Feelings*](https://stealingurfeelin.gs) runs much smoother on Chrome. (Another result is that there have been OffscreenCanvas regressions in Chrome stable releases which have caused [*Stealing Ur Feelings*](https://stealingurfeelin.gs) to segfault the browser.) Since [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was funded by Mozilla, I actually met with the Firefox graphics team, using [*Stealing Ur Feelings*](https://stealingurfeelin.gs) as a case study for how their OffscreenCanvas implementation could be improved. I don't think they liked that.
+
+At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was installed under a big television hanging from the ceiling which broadcast the AI-extracted "secrets" of whoever was experiencing the project at that moment. The client and server to support this functionality is located in the [/installation](https://noahlevenson.github.io/stealing-ur-feelings/final/installation/) directory. For the New York City festival premiere, I tuned the political bias algorithm to classify absolutely everyone as a far-right conservative Republican. It was fun to watch people freak out when that got broadcast on the big TV.
+<br/><br/>
+
+### :newspaper: Press and recognition
 [Museum of the Moving Image](http://www.scienceandfilm.org/articles/3216/stealing-ur-feelings)
 
 [Scientific American](https://www.scientificamerican.com/article/this-video-watches-you-back/)
@@ -57,7 +76,7 @@ The project was somewhat notoriously plagiarized by the Financial Times; this ev
 [Mozilla](https://blog.mozilla.org/blog/2019/09/23/introducing-stealing-ur-feelings-an-interactive-documentary-about-big-tech-ai-and-you/)
 <br/><br/>
 
-#### :movie_camera: festival & exhibition history
+### :movie_camera: Festival and exhibition history
 [2019 Tribeca Film Festival](https://www.tribecafilm.com/festival/archive/stealing-ur-feelings-2019)
 
 [2019 Camden International Film Festival](https://ciff19.eventive.org/films/stealing-ur-feelings-5d559831bc7b71011b2e7a96)
@@ -71,18 +90,17 @@ The project was somewhat notoriously plagiarized by the Financial Times; this ev
 [The Glass Room SF presented by Tactical Tech](https://theglassroom.org/san-francisco/exhibits)
 <br/><br/>
 
-#### :eyes: development
+### :eyes: Development
+* [source code](https://noahlevenson.github.io/stealing-ur-feelings/final/)
 * [interactive tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/)
 * [old interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) 
 * [wireframe mockups](https://noahlevenson.github.io/stealing-ur-feelings/media/wireframes_07112018.pdf)
 * [initial funding concept](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/initial-funding-concept.md)
 * [full application](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/full-application.md)
 * [slides from the 10/24/2018 Pecha Kucha talk at London's Royal Society of Arts](https://docs.google.com/presentation/d/e/2PACX-1vSGp751HRvqRZc-oWQM_JA9mb0IfSe8w2bBLbMmNi3-fb2gRVuUeyUqYsko0Gatd53z2BETPx-63Ybk/pub?start=false&loop=false&delayms=20000)
-* film script (coming soon)
-* complete source code (coming soon)
 <br/><br/>
 
-#### :zap: changelog
+### :zap: Changelog
 **06/01/2021** [The American Prospect article](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/) is published, detailing plagiarism by The Financial Times
 
 **05/26/2021** We're featured in [Slanted Magazine #37, the AI issue](https://www.slanted.de/product/slanted-magazine-37-ai/)
@@ -128,4 +146,3 @@ The project was somewhat notoriously plagiarized by the Financial Times; this ev
 **07/06/2018** Registered domain name: *stealingurfeelin.gs*
 
 **06/29/2018** Original funding concept accepted by Mozilla - we've been invited to submit a full application! 
-

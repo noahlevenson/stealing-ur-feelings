@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>STEALING UR FEELINGS</title>
+	<meta charset="utf-8" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap" rel="stylesheet">
+
+	<meta name="description" content="Meet the new AI that knows you better than you know yourself">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+	<meta property="og:title" content="STEALING UR FEELINGS">
+	<meta property="og:description" content="Meet the new AI that knows you better than you know yourself">
+	<meta property="og:url" content="https://stealingurfeelin.gs">
+	<meta property="og:image" content="https://stealingurfeelin.gs/img/suf_1200x1200.jpg">
+
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="STEALING UR FEELINGS">
+	<meta property="twitter:description" content="Meet the new AI that knows you better than you know yourself">
+	<meta property="twitter:image" content="https://stealingurfeelin.gs/img/suf_1200x600.jpg">
+</head>
+
+<body>
+	<!-- <script src="http://localhost:8000/socket.io/socket.io.js"> --> </script>
+
+	<script src="lib/face-api.min.js"></script>
+	<script src="lib/phaser.min.js"></script>
+	<script src="js/events.min.js"></script>
+	<script src="js/unsupported-browser.min.js"></script>
+	<script src="js/boot.min.js"></script>
+	<script src="js/load.min.js"></script>
+	<script src="js/boot-cv.min.js"></script>
+	<script src="js/validate.min.js"></script>
+	<script src="js/data-init.min.js"></script>
+	<script src="js/play.min.js"></script>
+	<script src="js/petition.min.js"></script>
+	<script src="js/stealing-ur-feelings.min.js"></script>
+
+	<div id="rotate-device">
+		<img src="img/rotate_arrow.png" style="display: inline; position: relative; top: 20%;">
+
+		<br>
+		
+		<span class="rotate-text">
+			please rotate to<br>landscape mode
+		</span>
+	</div>
+
+	<img id="baseball-card">	
+	<a href="" id="baseball-card-download" download="stealing_ur_feelings.png"></a>
+	
+	<div id="super-container">
+		<div id="content-area">
+				<div id="the-film"></div>
+		</div>
+
+		<div id="footer">
+			<div class="inline" style="position: relative; top: -1px;">
+				<table cellpadding="0" style="text-align: right; font-size: 12px; display: inline;">
+				  <tr>
+				    <th style="font-weight: 400;">created with</th>
+				  </tr>
+				  <tr>
+				    <td style="font-weight: 400;">support from</td>
+				  </tr>
+				</table>
+
+				<a href="https://foundation.mozilla.org"><img src="img/mozilla-logo-bw-rgb.png" class="header-img" style="position: relative; vertical-align: middle; top: 4px;"></a>
+			</div>
+
+			<div class="right-menu" style="float: right; margin-right: 24px; position: relative; top: 11px;">
+				<span style="position: relative; top: -4px;"><!-- <a href="https://foundation.mozilla.org/en/campaigns/snapchat-stop-stealing-our-feelings/">sign Mozilla's petition</a>  --><a href="https://github.com/noahlevenson/stealing-ur-feelings/blob/master/privacy_policy.md">privacy policy</a></span>
+
+				<a id="twitter-share-button"><img src="img/twitter_icon.png" width="16" height="16" class="inline"></a>
+
+				<a id="facebook-share-button"><img src="img/facebook_icon.png" width="16" height="16" class="inline"></a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		if (!(typeof window.orientation !== "undefined" || navigator.userAgent.indexOf("IEMobile") !== -1)) {
+			document.getElementById("footer").style.display = "block";
+		}
+
+		const contentArea = document.getElementById("content-area");
+		const footer = document.getElementById("footer");
+		
+		contentArea.style.height = window.innerHeight - footer.clientHeight + "px";
+
+		const theFilm = document.getElementById("the-film");
+
+		theFilm.style.width = "100vw"
+		theFilm.style.height = "auto";
+		theFilm.style.maxHeight = (window.innerHeight - footer.clientHeight) + "px";
+	
+		window.addEventListener("resize", (e) => {
+			contentArea.style.height = window.innerHeight - footer.clientHeight + "px";
+			theFilm.style.maxHeight = (window.innerHeight - footer.clientHeight) + "px";
+		});	
+
+		const twitterBtn = document.querySelector("#twitter-share-button");
+		const text = encodeURIComponent("Meet the new A.I. that knows you better than you know yourself");
+		const shareUrl = "https://twitter.com/intent/tweet?url=" + 'https://stealingurfeelin.gs' + '&text=' + text;
+		twitterBtn.href = shareUrl;
+
+		twitterBtn.addEventListener("click", (e) => {
+			e.preventDefault();
+			const win = window.open(shareUrl, "ShareOnTwitter", "height=450, width=500");
+			win.opener = null; 
+		});
+
+		const facebookBtn = document.querySelector("#facebook-share-button");
+		const fbShareUrl = "https://www.facebook.com/sharer/sharer.php?u=";
+		facebookBtn.href = fbShareUrl;
+
+		facebookBtn.addEventListener("click", (e) => {
+			e.preventDefault();
+			const win = window.open(fbShareUrl + encodeURIComponent("https://stealingurfeelin.gs"), "ShareOnFacebook", "width=626, height=436"); 
+			win.opener = null;
+		});
+	</script>
+</body>
+</html>
