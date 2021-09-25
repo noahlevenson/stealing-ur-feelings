@@ -1,15 +1,16 @@
-body, html {
-	margin: 0;
-	height: 100%;
-	background-color: #000;
+body,
+html {
+  margin: 0;
+  height: 100%;
+  background-color: #000;
 }
 
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #container {
-	width: 170vh;
-	max-width: 170vh;
+  width: 170vh;
+  max-width: 170vh;
 }

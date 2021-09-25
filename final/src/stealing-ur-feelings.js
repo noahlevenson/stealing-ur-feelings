@@ -8,7 +8,7 @@ const K_DEBUG_FRAMECODE_SCALE = 10;
 // Mute all sounds (for sanity during debugging)
 const K_MUTE = false;
 
-// Debug objects 
+// Debug objects
 let framecodeSprite, pauseKey, frameQueryKey;
 
 // Beta tester mode
@@ -30,7 +30,10 @@ let socket = null;
 const K_PETITION = true;
 let redirectionInitiated = false;
 let petitionFrame = 0;
-let petitionSmileGfx, redirectingText, noPetitionFaceDetectedText, userFailedToSmileTimeout;
+let petitionSmileGfx,
+  redirectingText,
+  noPetitionFaceDetectedText,
+  userFailedToSmileTimeout;
 
 // Are we running on a mobile device?
 let K_MOBILE = false;
@@ -64,7 +67,7 @@ const K_NUMBER_OF_LANDMARKS = 68;
 const K_GET_OPTICAL_SYNC_INTERVAL = 1;
 
 // Use webworkers to run the CV engine on another thread? This gives huge performance benefits
-// on mid and low end machines, but requires OffscreenCanvas for zero copy transfer - currently 
+// on mid and low end machines, but requires OffscreenCanvas for zero copy transfer - currently
 // (as of 06/2019) implemented only in Chrome by default, and available in Firefox behind a flag
 // Note that as of 07/2019, Firefox's experimental implementation still lacks the required 2D context support
 let K_MULTITHREADING = true;
@@ -94,10 +97,12 @@ const K_VIDEO_PROCESSING_DOWNRES_FACTOR = 4;
 const K_VIDEO_PROCESSING_FRAME_INTERVAL = 1;
 
 // Points describe paths in our landmarks array to draw corresponding features
-const K_FACE_OUTLINE = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+const K_FACE_OUTLINE = [
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+];
 const K_FACE_MOUTH_OUTER = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 48];
 const K_FACE_MOUTH_INNER_TOP = [60, 61, 62, 63, 64];
-const K_FACE_MOUTH_INNER_BOTTOM = [60, 67, 66, 65, 64];  
+const K_FACE_MOUTH_INNER_BOTTOM = [60, 67, 66, 65, 64];
 const K_FACE_SEPTUM = [27, 28, 29, 30];
 const K_FACE_NOSE = [31, 32, 33, 34, 35];
 const K_FACE_LEFT_EYE = [36, 37, 38, 39, 40, 41, 36];
@@ -119,13 +124,28 @@ let creditSqueezeOffset = 0;
 
 // Global identifiers for media elements
 // Could we have done this better? You bet
-let theWayISeeYouTitle, standbyForAIVisionTitle, pizzaTitle, pizzaBias, kanyeTitle, kanyeBias, genderStatsBias, threeTitle, 
-	twoTitle, oneTitle, techQuizTitle, youLikeDogsSFX, youDontLikeDogsSFX, youPreferMenSFX, youPreferWomenSFX, dogEmojiEmitter, dogStats;
+let theWayISeeYouTitle,
+  standbyForAIVisionTitle,
+  pizzaTitle,
+  pizzaBias,
+  kanyeTitle,
+  kanyeBias,
+  genderStatsBias,
+  threeTitle,
+  twoTitle,
+  oneTitle,
+  techQuizTitle,
+  youLikeDogsSFX,
+  youDontLikeDogsSFX,
+  youPreferMenSFX,
+  youPreferWomenSFX,
+  dogEmojiEmitter,
+  dogStats;
 let questionMarks = [];
 let adGfx;
 let deserveAds = [];
 let gradient1Sprite, pictureFrameSprite, userPhotoSprite;
-let lastKnownFaceBounding = {x: null, y: null, size: null};
+let lastKnownFaceBounding = { x: null, y: null, size: null };
 let userPhotoZoomTimer;
 let userPhotoBMD;
 let userPhotoScale;
@@ -180,7 +200,7 @@ let logoSprite, logoAnimationTimer;
 let dogLoopVideo, dogLoopSprite;
 let validateFrame = 0;
 let sunglasses;
-let readyToPlay = hasStarted = false;
+let readyToPlay = (hasStarted = false);
 let tophat, monocle, mustache, tophatGroup;
 let fullScreenButton;
 let pixelatedUserFaceBMD, pixelatedUserFaceSprite;
@@ -189,11 +209,18 @@ let kachingSFX;
 let dollarEmitter;
 let userFaceRawEmotionsText;
 let computerDesktop, mouseCursor, doubleClickSFX;
-let disney, twentiethCenturyFox, kelloggsCornFlakes, yourLocalPizzeria, forYourNextJob;
+let disney,
+  twentiethCenturyFox,
+  kelloggsCornFlakes,
+  yourLocalPizzeria,
+  forYourNextJob;
 let zuckScreenSpaceBMD, zuckScreenSpaceSprite;
-let zuckAlertBoxPosition = {x: K_PROJECT_WIDTH / 2, y: K_PROJECT_HEIGHT / 2};
+let zuckAlertBoxPosition = { x: K_PROJECT_WIDTH / 2, y: K_PROJECT_HEIGHT / 2 };
 let poorHat, crown, leftHeart, rightHeart, leftProhibited, rightProhibited;
-let wealthQuantificationComplete = mentalHealthQuantificationComplete = selfImageQuantificationComplete = false;
+let wealthQuantificationComplete =
+  (mentalHealthQuantificationComplete =
+  selfImageQuantificationComplete =
+    false);
 let estimatedIncomeLabel, facialAffectLabel, reactionToYourselfLabel;
 let finalPopSFX;
 let thoughtBubbleHappy, thoughtBubbleSad;
@@ -207,7 +234,11 @@ let patentBoxTimer;
 const K_TEXT_BOX_SIZE = 375;
 
 // And here's some global identifiers for those text boxes
-let dogTextBox, genderTextBox, raceTextBox, higherOrderTextBoxLeft, higherOrderTextBoxRight;
+let dogTextBox,
+  genderTextBox,
+  raceTextBox,
+  higherOrderTextBoxLeft,
+  higherOrderTextBoxRight;
 let allTextBoxesGroup, inFrontOfTextBoxGroup, behindTextBoxesGroup;
 
 // Global identifiers for the values associated with our binary classification events
@@ -217,18 +248,18 @@ let likeKanye = true;
 let likePizza = true;
 let preferWhite = false;
 let wayOverYourHead = false;
-let isPoor = false
+let isPoor = false;
 let isMentallyIll = false;
 let isSelfLoathing = false;
 
 // Other values associated with our classification events
 let iq = 100;
 let estimatedIncome = 31099;
-let menPos = womenPos = null;
-let dogPos = dogNeg = null;
-let kanyePos = kanyeNeg = null;
-let whiteNegative = nonWhiteNegative = finalRaceBias = null;
-let democratPct = republicanPct = null;
+let menPos = (womenPos = null);
+let dogPos = (dogNeg = null);
+let kanyePos = (kanyeNeg = null);
+let whiteNegative = (nonWhiteNegative = finalRaceBias = null);
+let democratPct = (republicanPct = null);
 
 // For framecode sync system
 let frameCanvas, frame, lastFrame;
@@ -254,7 +285,11 @@ let boundingBox, faceModel, emotionChart, dimmerScreen;
 let landmarkText = new Array(K_NUMBER_OF_LANDMARKS);
 
 // More text rendering
-let userVideoStatusText, angryLabelText, sadLabelText, surprisedLabelText, happyLabelText;
+let userVideoStatusText,
+  angryLabelText,
+  sadLabelText,
+  surprisedLabelText,
+  happyLabelText;
 
 // For creating backplate to correct user video aspect ratio
 let userVideoBackplateBMD, userVideoBackplateSprite;
@@ -290,222 +325,254 @@ let viewerFaceData = [];
 
 // Data structure for collecting user face data (landmarks and/or emotions)
 function viewerFaceDataStruct(frame = null, l = null, x = null) {
-	this.frame = frame;
-	this.landmarks = null;
-	this.neutral = null;
-	this.happy = null;
-	this.sad = null;
-	this.angry = null;
-	this.fearful = null;
-	this.disgusted = null;
-	this.surprised = null;
+  this.frame = frame;
+  this.landmarks = null;
+  this.neutral = null;
+  this.happy = null;
+  this.sad = null;
+  this.angry = null;
+  this.fearful = null;
+  this.disgusted = null;
+  this.surprised = null;
 
-	if (l) {
-		this.landmarks = new Array();
-		this.length = l.length;
+  if (l) {
+    this.landmarks = new Array();
+    this.length = l.length;
 
-		for (let i = 0; i < this.length; i += 1) {
-			const landmark = l[i];
-			this.landmarks.push([landmark[0], landmark[1]]);
-		}
-	}
+    for (let i = 0; i < this.length; i += 1) {
+      const landmark = l[i];
+      this.landmarks.push([landmark[0], landmark[1]]);
+    }
+  }
 
-	if (x) {
-		this.neutral = x["neutral"];
-		this.happy = x["happy"]; 
-		this.sad = x["sad"]; 
-		this.angry = x["angry"]; 
-		this.fearful = x["fearful"]; 
-		this.disgusted = x["disgusted"];
-		this.surprised = x["surprised"];
-	}
+  if (x) {
+    this.neutral = x["neutral"];
+    this.happy = x["happy"];
+    this.sad = x["sad"];
+    this.angry = x["angry"];
+    this.fearful = x["fearful"];
+    this.disgusted = x["disgusted"];
+    this.surprised = x["surprised"];
+  }
 }
 
 function getAveragePositiveEmotions(emotionDataArray, startFrame, endFrame) {
-	if (emotionDataArray.length > 0) {
-		let acc = 0;
-		let n = 0;
+  if (emotionDataArray.length > 0) {
+    let acc = 0;
+    let n = 0;
 
-		for (let i = 0; i < emotionDataArray.length; i += 1) {
-			if (emotionDataArray[i].frame >= startFrame && emotionDataArray[i].frame < endFrame && emotionDataArray[i].happy) {
-				acc += emotionDataArray[i].happy;
-				n += 1;
-			}
-		}
+    for (let i = 0; i < emotionDataArray.length; i += 1) {
+      if (
+        emotionDataArray[i].frame >= startFrame &&
+        emotionDataArray[i].frame < endFrame &&
+        emotionDataArray[i].happy
+      ) {
+        acc += emotionDataArray[i].happy;
+        n += 1;
+      }
+    }
 
-		if (n > 0) {
-			return acc / n;
-		}
-	}
-	
-	return null;
-} 
+    if (n > 0) {
+      return acc / n;
+    }
+  }
+
+  return null;
+}
 
 function getAverageNegativeEmotions(emotionDataArray, startFrame, endFrame) {
-	if (emotionDataArray.length > 0) {
-		let acc = 0;
-		let n = 0;
+  if (emotionDataArray.length > 0) {
+    let acc = 0;
+    let n = 0;
 
-		for (let i = 0; i < emotionDataArray.length; i += 1) {
-			if (emotionDataArray[i].frame >= startFrame && emotionDataArray[i].frame < endFrame && emotionDataArray[i].sad) {
-				acc += emotionDataArray[i].sad + emotionDataArray[i].angry + emotionDataArray[i].fearful + emotionDataArray[i].disgusted;
-				n += 4;
-			}
-		}
+    for (let i = 0; i < emotionDataArray.length; i += 1) {
+      if (
+        emotionDataArray[i].frame >= startFrame &&
+        emotionDataArray[i].frame < endFrame &&
+        emotionDataArray[i].sad
+      ) {
+        acc +=
+          emotionDataArray[i].sad +
+          emotionDataArray[i].angry +
+          emotionDataArray[i].fearful +
+          emotionDataArray[i].disgusted;
+        n += 4;
+      }
+    }
 
-		if (n > 0) {
-			return acc / n;
-		}
-	}
+    if (n > 0) {
+      return acc / n;
+    }
+  }
 
-	return null;
+  return null;
 }
 
 // Set up the game engine!
 const cfg = {
-	width: K_PROJECT_WIDTH,
-	height: K_PROJECT_HEIGHT,
-	multiTexture: false,
-	parent: "the-film",
-	enableDebug: false, // Remember to flip this for production
-	renderer: Phaser.CANVAS,
-	antialias: true,
+  width: K_PROJECT_WIDTH,
+  height: K_PROJECT_HEIGHT,
+  multiTexture: false,
+  parent: "the-film",
+  enableDebug: false, // Remember to flip this for production
+  renderer: Phaser.CANVAS,
+  antialias: true,
 };
 
 Phaser.Device.onInitialized.add((device) => {
-	// Profile the host and make set things accordingly
-	// TODO: Validate specific browser versions and capabilities
-	if ((device.iOS && device.mobileSafari && navigator.userAgent.includes("CriOS")) || (device.iOS && device.mobileSafari && navigator.userAgent.includes("FxiOS")) || device.edge || device.ie) {
-		game.state.start("unsupportedBrowser");
-	} else {
-		if (device.mobileSafari) {
-			K_SHOW_BASEBALL_CARD = false;
-		}
+  // Profile the host and make set things accordingly
+  // TODO: Validate specific browser versions and capabilities
+  if (
+    (device.iOS &&
+      device.mobileSafari &&
+      navigator.userAgent.includes("CriOS")) ||
+    (device.iOS &&
+      device.mobileSafari &&
+      navigator.userAgent.includes("FxiOS")) ||
+    device.edge ||
+    device.ie
+  ) {
+    game.state.start("unsupportedBrowser");
+  } else {
+    if (device.mobileSafari) {
+      K_SHOW_BASEBALL_CARD = false;
+    }
 
-		if (device.safari || device.mobileSafari || device.iOS || device.android) {
-			K_USER_MUST_INITIATE_VIDEO = true;
-		}
+    if (device.safari || device.mobileSafari || device.iOS || device.android) {
+      K_USER_MUST_INITIATE_VIDEO = true;
+    }
 
-		if (!device.desktop) {
-			K_MOBILE = true;
-		}
+    if (!device.desktop) {
+      K_MOBILE = true;
+    }
 
-		if (device.chrome) {
-			K_MULTITHREADING = true;
+    if (device.chrome) {
+      K_MULTITHREADING = true;
 
-			if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
-				K_CV_REFRESH_INTERVAL = 8;
-			}
-		} else {
-			K_MULTITHREADING = false;
+      if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
+        K_CV_REFRESH_INTERVAL = 8;
+      }
+    } else {
+      K_MULTITHREADING = false;
 
-			if (!navigator.hardwareConcurrency || navigator.hardwareConcurrency < 8) {
-				K_CV_REFRESH_INTERVAL = 8;
-				K_LOGO_ANIMATION = false;
-			}
-		}
+      if (!navigator.hardwareConcurrency || navigator.hardwareConcurrency < 8) {
+        K_CV_REFRESH_INTERVAL = 8;
+        K_LOGO_ANIMATION = false;
+      }
+    }
 
-		// console.log(device);
-		// console.log(`multithreading: ${K_MULTITHREADING}, cv refresh rate: ${K_CV_REFRESH_INTERVAL}`);
+    // console.log(device);
+    // console.log(`multithreading: ${K_MULTITHREADING}, cv refresh rate: ${K_CV_REFRESH_INTERVAL}`);
 
-		if (K_INSTALLATION_MODE) {
-			socket = io("http://localhost:8000");
-		}
+    if (K_INSTALLATION_MODE) {
+      socket = io("http://localhost:8000");
+    }
 
-		// Pilfered code that, in combination with code in the worker, tricks
-		// tensorflow and face-api.js into thinking it's not running in a worker
-		// Credit to jeffreytgilbert on github: https://github.com/justadudewhohacks/face-api.js/issues/47
-		if (K_MULTITHREADING) {
-			screenCopy = {};
+    // Pilfered code that, in combination with code in the worker, tricks
+    // tensorflow and face-api.js into thinking it's not running in a worker
+    // Credit to jeffreytgilbert on github: https://github.com/justadudewhohacks/face-api.js/issues/47
+    if (K_MULTITHREADING) {
+      screenCopy = {};
 
-			for(let key in screen){
-				screenCopy[key] = +screen[key];
-			}
+      for (let key in screen) {
+        screenCopy[key] = +screen[key];
+      }
 
-			screenCopy.orientation = {};
+      screenCopy.orientation = {};
 
-			for(let key in screen.orientation){
-				if (typeof screen.orientation[key] !== 'function') {
-					screenCopy.orientation[key] = screen.orientation[key];
-				}
-			}
+      for (let key in screen.orientation) {
+        if (typeof screen.orientation[key] !== "function") {
+          screenCopy.orientation[key] = screen.orientation[key];
+        }
+      }
 
-			visualViewportCopy = {};
+      visualViewportCopy = {};
 
-			if (typeof window['visualViewport'] !== 'undefined') {
-				for(let key in visualViewport){
-					if(typeof visualViewport[key] !== 'function') {
-						visualViewportCopy[key] = +visualViewport[key];
-					}
-				}
-			}
+      if (typeof window["visualViewport"] !== "undefined") {
+        for (let key in visualViewport) {
+          if (typeof visualViewport[key] !== "function") {
+            visualViewportCopy[key] = +visualViewport[key];
+          }
+        }
+      }
 
-			styleMediaCopy = {};
+      styleMediaCopy = {};
 
-			if (typeof window['styleMedia'] !== 'undefined') {
-				for(let key in styleMedia){
-					if(typeof styleMedia[key] !== 'function') {
-						styleMediaCopy[key] = styleMedia[key];
-					}
-				}
-			}
+      if (typeof window["styleMedia"] !== "undefined") {
+        for (let key in styleMedia) {
+          if (typeof styleMedia[key] !== "function") {
+            styleMediaCopy[key] = styleMedia[key];
+          }
+        }
+      }
 
-			fakeWindow = {};
+      fakeWindow = {};
 
-			Object.getOwnPropertyNames(window).forEach(name => {
-				try {
-					if (typeof window[name] !== 'function'){
-						if (typeof window[name] !== 'object' && 
-							name !== 'undefined' && 
-							name !== 'NaN' && 
-							name !== 'Infinity' && 
-							name !== 'event' && 
-							name !== 'name' 
-						) {
-							fakeWindow[name] = window[name];
-						} else if (name === 'visualViewport') {
-							// console.log('want this?', name, JSON.parse(JSON.stringify(window[name])));
-						} else if (name === 'styleMedia') {
-							// console.log('want this?', name, JSON.parse(JSON.stringify(window[name])));
-						}
-					}
-				} catch (ex){
-					// console.log('Access denied for a window property');
-				}
-			});
+      Object.getOwnPropertyNames(window).forEach((name) => {
+        try {
+          if (typeof window[name] !== "function") {
+            if (
+              typeof window[name] !== "object" &&
+              name !== "undefined" &&
+              name !== "NaN" &&
+              name !== "Infinity" &&
+              name !== "event" &&
+              name !== "name"
+            ) {
+              fakeWindow[name] = window[name];
+            } else if (name === "visualViewport") {
+              // console.log('want this?', name, JSON.parse(JSON.stringify(window[name])));
+            } else if (name === "styleMedia") {
+              // console.log('want this?', name, JSON.parse(JSON.stringify(window[name])));
+            }
+          }
+        } catch (ex) {
+          // console.log('Access denied for a window property');
+        }
+      });
 
-			fakeWindow.screen = screenCopy;
-			fakeWindow.visualViewport = visualViewportCopy;
-			fakeWindow.styleMedia = styleMediaCopy;
-			// console.log(fakeWindow);
+      fakeWindow.screen = screenCopy;
+      fakeWindow.visualViewport = visualViewportCopy;
+      fakeWindow.styleMedia = styleMediaCopy;
+      // console.log(fakeWindow);
 
-			fakeDocument = {};
+      fakeDocument = {};
 
-			for(let name in document){
-				try {
-					if(name === 'all') {
-						// o_O
-					} else if (typeof document[name] !== 'function' && typeof document[name] !== 'object') {
-							fakeDocument[name] = document[name];
-					} else if (typeof document[name] === 'object') {
-						fakeDocument[name] = null;
-					} else if(typeof document[name] === 'function') {
-						fakeDocument[name] = { type:'*function*', name: document[name].name };
-					}
-				} catch (ex){
-					// console.log('Access denied for a window property');
-				}
-			}
-		}
+      for (let name in document) {
+        try {
+          if (name === "all") {
+            // o_O
+          } else if (
+            typeof document[name] !== "function" &&
+            typeof document[name] !== "object"
+          ) {
+            fakeDocument[name] = document[name];
+          } else if (typeof document[name] === "object") {
+            fakeDocument[name] = null;
+          } else if (typeof document[name] === "function") {
+            fakeDocument[name] = {
+              type: "*function*",
+              name: document[name].name,
+            };
+          }
+        } catch (ex) {
+          // console.log('Access denied for a window property');
+        }
+      }
+    }
 
-		// Should this be moved to boot-cv?
-		if (K_MULTITHREADING) {
-			cvWorker = new Worker("js/cv-worker.min.js");
-			cvWorker.postMessage({fakeWindow: fakeWindow, fakeDocument: fakeDocument, opcode: 0});
-		}
+    // Should this be moved to boot-cv?
+    if (K_MULTITHREADING) {
+      cvWorker = new Worker("js/cv-worker.min.js");
+      cvWorker.postMessage({
+        fakeWindow: fakeWindow,
+        fakeDocument: fakeDocument,
+        opcode: 0,
+      });
+    }
 
-		game.state.start("boot");
-	}
+    game.state.start("boot");
+  }
 });
 
 const game = new Phaser.Game(cfg);

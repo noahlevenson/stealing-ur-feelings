@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <title>SVIZ</title>
 
-<head>
+    <meta charset="utf-8" />
 
-	<title>SVIZ</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
 
-	<meta charset="utf-8" />
-	
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	
-</head>
+  <body>
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <!-- For production, replace localhost with ip address of sdata service -->
 
-<body>
-	<script src="http://localhost:8000/socket.io/socket.io.js"></script> <!-- For production, replace localhost with ip address of sdata service -->
+    <script src="lib/phaser.js"></script>
+    <script src="js/boot.js"></script>
+    <script src="js/load.js"></script>
+    <script src="js/play.js"></script>
+    <script src="js/sviz.js"></script>
 
-	<script src="lib/phaser.js"></script>
-	<script src="js/boot.js"></script>
-	<script src="js/load.js"></script>
-	<script src="js/play.js"></script>
-	<script src="js/sviz.js"></script>
-	
-	<div id="container">
-		<div id="the-film"></div>
-	</div>
+    <div id="container">
+      <div id="the-film"></div>
+    </div>
 
-	<script>
-		const container = document.getElementById("container");
+    <script>
+      const container = document.getElementById("container");
 
-		const aspectRatio = window.innerWidth / window.innerHeight;
-		container.style.width = aspectRatio > 1 ? Math.floor(aspectRatio * 100 - 10) + "vh" : "96vw";
+      const aspectRatio = window.innerWidth / window.innerHeight;
+      container.style.width =
+        aspectRatio > 1 ? Math.floor(aspectRatio * 100 - 10) + "vh" : "96vw";
 
-		window.addEventListener("resize", (e) => {
-			const aspectRatio = window.innerWidth / window.innerHeight;
-			container.style.width = aspectRatio > 1 ? Math.floor(aspectRatio * 100 - 10) + "vh" : "96vw";
-		});	
-	</script>
-	
-</body>
-
+      window.addEventListener("resize", (e) => {
+        const aspectRatio = window.innerWidth / window.innerHeight;
+        container.style.width =
+          aspectRatio > 1 ? Math.floor(aspectRatio * 100 - 10) + "vh" : "96vw";
+      });
+    </script>
+  </body>
 </html>
