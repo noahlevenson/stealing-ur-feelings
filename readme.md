@@ -6,8 +6,8 @@
 * [What is *Stealing Ur Feelings?*](#question-what-is-stealing-ur-feelings)
 * [Press and recognition](#newspaper-press-and-recognition)
 * [Festival and exhibiton history](#movie_camera-festival-and-exhibition-history)
-* [Noah's dev notes](#eyes-noahs-dev-notes)
-* [Source](#floppy_disk-source)
+* [Tech notes](#eyes-tech-notes)
+* [Archive](#floppy_disk-archive)
 * [Changelog](#zap-changelog)
 
 ### :question: What is *Stealing Ur Feelings?*
@@ -75,25 +75,25 @@ The project began life as an application for Mozilla's 2018 [awards for art and 
 
 [The Glass Room SF presented by Tactical Tech](https://theglassroom.org/san-francisco/exhibits)
 
-### :eyes: Noah's dev notes
-[*Stealing Ur Feelings*](https://stealingurfeelin.gs) was built in a hurry, and it shows. [Tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/) was slapped together for the Tribeca Film Festival submission. The [final codebase](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final) is essentially the result of layering many hasty ideas on top of that demo.
+### :eyes: Tech notes
+* **The code is a mess.** It required a lot of trial and error over many months just to figure out how to tell the story. Consequently, the version of [*Stealing Ur Feelings*](https://stealingurfeelin.gs) which premiered at the Tribeca Film Festival was programmed over 6 frantic weeks between March and April 2019. That version was so unoptimized that it simply wouldn't run on average hardware. Optimization began in June 2019, and there wasn't enough time to improve most of the earlier bad decisions. The indecipherable comments have been preserved.
 
-I built a few different computer vision engines to support the idea, including a big complicated custom thing that we didn't end up using. Another thing we didn't use: I managed to compile Dlib for the browser via WebAssembly, and I got its [multithreaded facial landmark detector working with HTML5 canvas](https://github.com/noahlevenson/dlib-in-the-browser) by mapping native pthreads to WebWorkers.
+* **Different versions of the project have used different computer vision engines.** Journalists often asked what emotion recognition models we used; the answer changed depending on the day they viewed the project. We built an excessively complicated custom engine on top of TensorFlow that wound up getting scrapped. At one point we managed to compile [Dlib](http://dlib.net/) for the browser via the WebAssembly toolchain, and we got its multithreaded facial landmark detector working with HTML5 canvas by mapping native pthreads to WebWorkers. You can see that experiment [here](https://github.com/noahlevenson/dlib-in-the-browser). The version of [*Stealing Ur Feelings*](https://stealingurfeelin.gs) published in September 2019 uses [face-api.js](https://github.com/justadudewhohacks/face-api.js/).
 
-To achieve the seamless quick cuts between video and interactive set pieces, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) uses a custom system for frame-accurate video synchronization that I originally developed for [*Weird Box*](https://weirdbox.tv); it's based on embedding encoded information in the overscan area of the video, a la [datacasting](https://en.wikipedia.org/wiki/Datacasting).
+* ***Stealing Ur Feelings* uses a custom system for frame-accurate video synchronization.** It's based on embedding encoded information in the overscan area of the video, a la [datacasting](https://en.wikipedia.org/wiki/Datacasting). The purely arithmetic  approaches to frame-accurate sync are interesting, but the effects of floating point approximation error means that none of them work at the level of precision we required.
 
-On Chrome, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) deploys a zero-copy hack using [OffscreenCanvas](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas) to run the computer vision engine on a separate thread. At development time, Firefox's implementation of OffscreenCanvas was incomplete. The result is that [*Stealing Ur Feelings*](https://stealingurfeelin.gs) runs much smoother on Chrome. (Another result is that there have been OffscreenCanvas regressions in Chrome stable releases which have caused [*Stealing Ur Feelings*](https://stealingurfeelin.gs) to segfault the browser.)
+* **On Chrome, *Stealing Ur Feelings* deploys a zero-copy hack using OffscreenCanvas to run the computer vision engine on a separate thread.** During development, Firefox's implementation of OffscreenCanvas was incomplete. The result is that [*Stealing Ur Feelings*](https://stealingurfeelin.gs) runs much smoother on Chrome. (Another result: there have been OffscreenCanvas regressions in Chrome stable releases which have caused [*Stealing Ur Feelings*](https://stealingurfeelin.gs) to segfault the browser.)
 
-At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was installed under a big television hanging from the ceiling which broadcast the AI-extracted "secrets" of whoever was experiencing the project at that moment. The client and server to support this functionality are located in the [/installation](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final/installation) directory. For the premiere, I tuned the political bias algorithm to classify absolutely everyone as a far-right conservative Republican. It was fun to watch viewers freak out when their secret political affiliation was broadcast on the jumbotron.
+* **There's a secret physical installation mode.** At the Tribeca Film Festival premiere, [*Stealing Ur Feelings*](https://stealingurfeelin.gs) was installed under a big television hanging from the ceiling which broadcast the AI-extracted "secrets" of whoever was experiencing the project at that moment. The client and server to support this functionality are located in the [/installation](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final/installation) directory. For the premiere, we tuned the political bias algorithm to classify absolutely everyone as a far-right conservative Republican. It was fun to watch journalists freak out when their secret political affiliation was revealed on the jumbotron.
 
-### :floppy_disk: Source
-* [source code](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final)
-* [interactive tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/)
-* [old interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) 
-* [wireframe mockups](https://noahlevenson.github.io/stealing-ur-feelings/media/wireframes_07112018.pdf)
-* [initial funding concept](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/initial-funding-concept.md)
-* [full application](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/full-application.md)
-* [slides from the 10/24/2018 Pecha Kucha talk at London's Royal Society of Arts](https://docs.google.com/presentation/d/e/2PACX-1vSGp751HRvqRZc-oWQM_JA9mb0IfSe8w2bBLbMmNi3-fb2gRVuUeyUqYsko0Gatd53z2BETPx-63Ybk/pub?start=false&loop=false&delayms=20000)
+### :floppy_disk: Archive
+* [Source code](https://github.com/noahlevenson/stealing-ur-feelings/tree/master/final)
+* [Interactive tech demo v2.0](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo-v2/)
+* [Old interactive tech demo](https://noahlevenson.github.io/stealing-ur-feelings/tech-demo/) 
+* [Wireframe mockups](https://noahlevenson.github.io/stealing-ur-feelings/media/wireframes_07112018.pdf)
+* [Initial funding concept](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/initial-funding-concept.md)
+* [Full application](https://github.com/noahlevenson/stealing-ur-feelings/blob/master/media/full-application.md)
+* [Slides from the 10/24/2018 Pecha Kucha talk at London's Royal Society of Arts](https://docs.google.com/presentation/d/e/2PACX-1vSGp751HRvqRZc-oWQM_JA9mb0IfSe8w2bBLbMmNi3-fb2gRVuUeyUqYsko0Gatd53z2BETPx-63Ybk/pub?start=false&loop=false&delayms=20000)
 
 ### :zap: Changelog
 **06/01/2021** [The American Prospect article](https://prospect.org/culture/stealing-ur-website-emotion-recognition-ai-financial-times/) is published, detailing plagiarism by The Financial Times
